@@ -60,13 +60,13 @@
 	чтобы получить билет на другую локацию.
 	1) Город
 	Обычный мегаполис с большими зданиями, подземными туннелями и гетто в подворотнях.
-	![Локация городу](https://github.com/alkmanistik/GodotGameJam-1/blob/main/other/Локация%20город.png)
+![Локация городу](https://github.com/alkmanistik/GodotGameJam-1/blob/main/other/Локация%20город.png)
 	2) Научная лаборатория
 	Научная станция, где работают котики учённые, тут будут и лаборатории и куча научных штук.
-	![Локация лаборатория](https://github.com/alkmanistik/GodotGameJam-1/blob/main/other/Локация%20лаборатория.png)
+![Локация лаборатория](https://github.com/alkmanistik/GodotGameJam-1/blob/main/other/Локация%20лаборатория.png)
 	3) Долина/лес
 	Долина это локация с большим озером, огородом и с тротуаром и скамейками, чем-то похожа на парк.
-	![Локация Парк](https://github.com/alkmanistik/GodotGameJam-1/blob/main/other/Локация%20Парк.png)
+![Локация Парк](https://github.com/alkmanistik/GodotGameJam-1/blob/main/other/Локация%20Парк.png)
 # Коты
 ### Для локации Город
 	1)Котопёс - образ из мультфильма, мы его будем видеть только, как собаку,
