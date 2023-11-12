@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://bylu52lts4yq2"]
+
+[ext_resource type="Script" path="res://scene/ui/inventory.gd" id="1_sdp4c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xoyep"]
+border_width_top = 25
+border_width_bottom = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbpaa"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_top = 25
+border_width_bottom = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71b4k"]
+
+[node name="Inventory" type="Control" groups=["inventory"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_sdp4c")
+
+[node name="Panel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(110, 350)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -175.0
+offset_right = 110.0
+offset_bottom = 175.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xoyep")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(110, 350)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pbpaa")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+show_behind_parent = true
+custom_minimum_size = Vector2(100, 300)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -150.0
+offset_right = 100.0
+offset_bottom = 150.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_71b4k")
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1

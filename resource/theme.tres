@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cm00cp0vxjkhr"]
+
+[ext_resource type="FontFile" uid="uid://cksj8xedfpn66" path="res://resource/fonts/MouldyCheeseRegular-WyMWG.ttf" id="1_ux872"]
+
+[resource]
+Label/fonts/font = ExtResource("1_ux872")

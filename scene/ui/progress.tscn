@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://t00py8xatxbm"]
+
+[ext_resource type="Script" path="res://scene/ui/progress.gd" id="1_fsjbx"]
+[ext_resource type="Theme" uid="uid://cm00cp0vxjkhr" path="res://resource/theme.tres" id="1_hproh"]
+[ext_resource type="Texture2D" uid="uid://cktswj85py507" path="res://resource/texture/kotik1.png" id="2_utxos"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iiep5"]
+corner_radius_top_right = 100
+
+[node name="Progress" type="Control" groups=["progress"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fsjbx")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iiep5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 300.0
+offset_bottom = 89.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme = ExtResource("1_hproh")
+theme_override_font_sizes/font_size = 55
+text = "0 / 6"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("2_utxos")
+expand_mode = 2

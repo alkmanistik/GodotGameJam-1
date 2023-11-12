@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctypoilj0kuw0"]
+
+[ext_resource type="PackedScene" uid="uid://t00py8xatxbm" path="res://scene/ui/progress.tscn" id="1_sn4qs"]
+[ext_resource type="PackedScene" uid="uid://bylu52lts4yq2" path="res://scene/ui/inventory.tscn" id="2_sw5ld"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Progress" parent="." instance=ExtResource("1_sn4qs")]
+
+[node name="Inventory" parent="." instance=ExtResource("2_sw5ld")]

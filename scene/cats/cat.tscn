@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://q6r82wtcyigf"]
+
+[ext_resource type="Script" path="res://scene/cats/cat.gd" id="1_v10bs"]
+
+[node name="Cat" type="Node2D"]
+script = ExtResource("1_v10bs")
