@@ -10,4 +10,4 @@
 
 [node name="Inventory" parent="." instance=ExtResource("2_sw5ld")]
 
-[node name="Telephone curtailed" parent="." instance=ExtResource("3_njgji")]
+[node name="Telephone curtailed" parent="." groups=["telephone"] instance=ExtResource("3_njgji")]

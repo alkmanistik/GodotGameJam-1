@@ -3,6 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://cktswj85py507" path="res://resource/texture/kotik1.png" id="1_ygkhe"]
 
 [node name="item_name" type="TextureRect"]
-custom_minimum_size = Vector2(75, 75)
+custom_minimum_size = Vector2(100, 75)
 texture = ExtResource("1_ygkhe")
 expand_mode = 5

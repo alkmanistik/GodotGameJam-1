@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dglfqj6a2ah7v"]
+[gd_scene load_steps=10 format=3 uid="uid://dglfqj6a2ah7v"]
 
 [ext_resource type="Script" path="res://scene/ui/telephone_curtailed.gd" id="1_8744x"]
-[ext_resource type="Texture2D" uid="uid://br314h2dpoql" path="res://resource/texture/Telephone.png" id="1_ijoh1"]
 [ext_resource type="Theme" uid="uid://cm00cp0vxjkhr" path="res://resource/theme.tres" id="2_eo6n5"]
 [ext_resource type="Texture2D" uid="uid://cktswj85py507" path="res://resource/texture/kotik1.png" id="3_w1t25"]
 [ext_resource type="Texture2D" uid="uid://bovd0sbhkvfkb" path="res://resource/texture/TAXI.png" id="5_8rq22"]
+[ext_resource type="Texture2D" uid="uid://dmvue7k1u5gb8" path="res://resource/texture/Tele.png" id="5_np4p7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3vmp"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -12,6 +12,24 @@ corner_radius_top_left = 42
 corner_radius_top_right = 42
 corner_radius_bottom_right = 42
 corner_radius_bottom_left = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7f0d"]
+bg_color = Color(0.341176, 0.341176, 0.341176, 1)
+corner_radius_top_left = 42
+corner_radius_top_right = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5audk"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pw60y"]
+bg_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [node name="Telephone curtailed" type="Control"]
 layout_mode = 3
@@ -30,29 +48,13 @@ mouse_filter = 2
 theme = ExtResource("2_eo6n5")
 script = ExtResource("1_8744x")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.25098, 0.25098, 0.25098, 1)
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -426.0
-offset_top = -640.0
-offset_right = 427.0
-offset_bottom = 640.0
-grow_horizontal = 0
-grow_vertical = 0
-pivot_offset = Vector2(426, 640)
-texture = ExtResource("1_ijoh1")
-
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
-offset_left = -203.0
-offset_top = -457.0
-offset_right = 204.0
-offset_bottom = 432.0
+offset_left = -199.0
+offset_top = -452.0
+offset_right = 181.0
+offset_bottom = 379.0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u3vmp")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
@@ -67,6 +69,7 @@ theme_override_constants/separation = 15
 [node name="Panel" type="Panel" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t7f0d")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/Panel"]
 layout_mode = 1
@@ -125,13 +128,21 @@ columns = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
-texture = ExtResource("5_8rq22")
-expand_mode = 4
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+icon = ExtResource("5_8rq22")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 27
 text = "Cat Taxi"
 horizontal_alignment = 1
 vertical_alignment = 2
@@ -140,13 +151,21 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer2"]
+[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
-texture = ExtResource("5_8rq22")
-expand_mode = 4
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+icon = ExtResource("5_8rq22")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer2"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 27
 text = "Cat Taxi"
 horizontal_alignment = 1
 vertical_alignment = 2
@@ -155,13 +174,21 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer3"]
+[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
-texture = ExtResource("5_8rq22")
-expand_mode = 4
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+icon = ExtResource("5_8rq22")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer3"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 27
 text = "Cat Taxi"
 horizontal_alignment = 1
 vertical_alignment = 2
@@ -170,13 +197,21 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer4"]
+[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer4"]
+custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
-texture = ExtResource("5_8rq22")
-expand_mode = 4
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+icon = ExtResource("5_8rq22")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer4"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 27
 text = "Cat Taxi"
 horizontal_alignment = 1
 vertical_alignment = 2
@@ -185,13 +220,21 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer5"]
+[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer5"]
+custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
-texture = ExtResource("5_8rq22")
-expand_mode = 4
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+icon = ExtResource("5_8rq22")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer5"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 27
 text = "Cat Taxi"
 horizontal_alignment = 1
 vertical_alignment = 2
@@ -200,15 +243,49 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer6"]
+[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer6"]
+custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
-texture = ExtResource("5_8rq22")
-expand_mode = 4
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+icon = ExtResource("5_8rq22")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer6"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 27
 text = "Cat Taxi"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[connection signal="mouse_entered" from="Panel" to="." method="_on_panel_mouse_entered"]
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.25098, 0.25098, 0.25098, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -435.0
+offset_top = -786.0
+offset_right = 418.0
+offset_bottom = 931.224
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(426, 640)
+mouse_filter = 2
+texture = ExtResource("5_np4p7")
+expand_mode = 5
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="mouse_entered" from="TextureRect" to="." method="_on_texture_rect_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect" to="." method="_on_texture_rect_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
