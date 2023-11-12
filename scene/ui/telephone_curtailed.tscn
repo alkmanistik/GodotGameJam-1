@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dglfqj6a2ah7v"]
+[gd_scene load_steps=15 format=3 uid="uid://dglfqj6a2ah7v"]
 
 [ext_resource type="Script" path="res://scene/ui/telephone_curtailed.gd" id="1_8744x"]
 [ext_resource type="Theme" uid="uid://cm00cp0vxjkhr" path="res://resource/theme.tres" id="2_eo6n5"]
 [ext_resource type="Texture2D" uid="uid://cktswj85py507" path="res://resource/texture/kotik1.png" id="3_w1t25"]
+[ext_resource type="Texture2D" uid="uid://b8rwgd652c6eg" path="res://resource/texture/back.png" id="4_h05sr"]
 [ext_resource type="Texture2D" uid="uid://bovd0sbhkvfkb" path="res://resource/texture/TAXI.png" id="5_8rq22"]
 [ext_resource type="Texture2D" uid="uid://dmvue7k1u5gb8" path="res://resource/texture/Tele.png" id="5_np4p7"]
 
@@ -18,6 +19,37 @@ bg_color = Color(0.341176, 0.341176, 0.341176, 1)
 corner_radius_top_left = 42
 corner_radius_top_right = 42
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rugpn"]
+bg_color = Color(0.6, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qnoxe"]
+bg_color = Color(0.505882, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjhpn"]
+bg_color = Color(0.486275, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7toh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5audk"]
 corner_radius_top_left = 15
 corner_radius_top_right = 15
@@ -31,7 +63,7 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[node name="Telephone curtailed" type="Control"]
+[node name="Telephone curtailed" type="Control" groups=["mini_telephone"]]
 layout_mode = 3
 anchors_preset = 3
 anchor_left = 1.0
@@ -104,6 +136,41 @@ text = "13:24"
 horizontal_alignment = 1
 vertical_alignment = 2
 
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_eo6n5")
+theme_override_font_sizes/font_size = 53
+text = "Telephone"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_eo6n5")
+theme_override_font_sizes/font_size = 50
+text = "Empty number"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Button2" type="Button" parent="Panel/VBoxContainer/VBoxContainer" groups=["telephone"]]
+custom_minimum_size = Vector2(0, 57)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_rugpn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qnoxe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kjhpn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_i7toh")
+icon = ExtResource("4_h05sr")
+icon_alignment = 1
+expand_icon = true
+
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_eo6n5")
@@ -128,12 +195,13 @@ columns = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer"]
+[node name="to_taxi" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
 icon = ExtResource("5_8rq22")
 icon_alignment = 1
 expand_icon = true
@@ -151,12 +219,13 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer2"]
+[node name="to_telephone" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
 icon = ExtResource("5_8rq22")
 icon_alignment = 1
 expand_icon = true
@@ -166,7 +235,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
 theme_override_font_sizes/font_size = 27
-text = "Cat Taxi"
+text = "Telephone"
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -174,12 +243,13 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer3"]
+[node name="to_camera" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer3"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
 icon = ExtResource("5_8rq22")
 icon_alignment = 1
 expand_icon = true
@@ -189,7 +259,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
 theme_override_font_sizes/font_size = 27
-text = "Cat Taxi"
+text = "Camera"
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -197,12 +267,13 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer4"]
+[node name="to_galery" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer4"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
 icon = ExtResource("5_8rq22")
 icon_alignment = 1
 expand_icon = true
@@ -212,7 +283,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
 theme_override_font_sizes/font_size = 27
-text = "Cat Taxi"
+text = "Galery"
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -220,12 +291,13 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer5"]
+[node name="to_locator" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer5"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
 icon = ExtResource("5_8rq22")
 icon_alignment = 1
 expand_icon = true
@@ -235,7 +307,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
 theme_override_font_sizes/font_size = 27
-text = "Cat Taxi"
+text = "Locator"
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -243,12 +315,13 @@ vertical_alignment = 2
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer6"]
+[node name="to_settings" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer6"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
 icon = ExtResource("5_8rq22")
 icon_alignment = 1
 expand_icon = true
@@ -258,7 +331,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
 theme_override_font_sizes/font_size = 27
-text = "Cat Taxi"
+text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -286,6 +359,12 @@ expand_mode = 5
 wait_time = 10.0
 autostart = true
 
+[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer/to_taxi" to="." method="_on_to_taxi_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer2/to_telephone" to="." method="_on_to_telephone_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer3/to_camera" to="." method="_on_to_camera_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer4/to_galery" to="." method="_on_to_galery_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer5/to_locator" to="." method="_on_to_locator_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer6/to_settings" to="." method="_on_to_settings_pressed"]
 [connection signal="mouse_entered" from="TextureRect" to="." method="_on_texture_rect_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect" to="." method="_on_texture_rect_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

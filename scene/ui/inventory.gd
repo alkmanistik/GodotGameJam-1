@@ -32,8 +32,8 @@ func close():
 	var tween = create_tween()
 	tween.tween_property(self, "position", another_pos, 0.3)
 
-func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("left_mouse") or Input.is_action_just_pressed("action"):
-		add_item("cat",cat_texture)
-	if Input.is_action_just_pressed("right_mouse"):
-		sub_item("cat")
+#func _unhandled_input(event: InputEvent) -> void:
+#	if Input.is_action_just_pressed("left_mouse") or Input.is_action_just_pressed("action"):
+#		add_item("cat",cat_texture)
+#	if Input.is_action_just_pressed("right_mouse"):
+#		sub_item("cat")

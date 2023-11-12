@@ -3,6 +3,7 @@ extends Control
 var usual_pos = Vector2(1608,1107)
 var another_pos = Vector2(1608,800)
 var hide_pos = Vector2(1608,2000)
+signal show_phone(tag)
 
 func update_label(now_cat,max_cat):
 	%Label.text = str(now_cat) + " / " + str(max_cat)
@@ -37,3 +38,32 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_timer_timeout() -> void:
 	update_time_label()
 	$Timer.start()
+
+
+func _on_to_taxi_pressed() -> void:
+	to_hide_pos()
+	show_phone.emit("Taxi")
+
+
+func _on_to_telephone_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_to_camera_pressed() -> void:
+	to_hide_pos()
+	show_phone.emit("Photoapparat")
+
+
+func _on_to_galery_pressed() -> void:
+	to_hide_pos()
+	show_phone.emit("PhotoGalery")
+
+
+func _on_to_locator_pressed() -> void:
+	to_hide_pos()
+	show_phone.emit("Locator")
+
+
+func _on_to_settings_pressed() -> void:
+	to_hide_pos()
+	show_phone.emit("Setting")

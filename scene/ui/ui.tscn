@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctypoilj0kuw0"]
+[gd_scene load_steps=5 format=3 uid="uid://ctypoilj0kuw0"]
 
 [ext_resource type="PackedScene" uid="uid://t00py8xatxbm" path="res://scene/ui/progress.tscn" id="1_sn4qs"]
 [ext_resource type="PackedScene" uid="uid://bylu52lts4yq2" path="res://scene/ui/inventory.tscn" id="2_sw5ld"]
 [ext_resource type="PackedScene" uid="uid://dglfqj6a2ah7v" path="res://scene/ui/telephone_curtailed.tscn" id="3_njgji"]
+[ext_resource type="PackedScene" uid="uid://c8icsrskhxlnl" path="res://scene/ui/telephone_expanded.tscn" id="4_b2hf0"]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -11,3 +12,10 @@
 [node name="Inventory" parent="." instance=ExtResource("2_sw5ld")]
 
 [node name="Telephone curtailed" parent="." groups=["telephone"] instance=ExtResource("3_njgji")]
+
+[node name="Telephone expanded" parent="." instance=ExtResource("4_b2hf0")]
+offset_top = 1000.0
+offset_bottom = 1000.0
+
+[connection signal="show_phone" from="Telephone curtailed" to="Telephone expanded" method="show_tag"]
+[connection signal="show_mini_phone" from="Telephone expanded" to="Telephone curtailed" method="to_usual_pos"]

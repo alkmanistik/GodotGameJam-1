@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8icsrskhxlnl"]
+[gd_scene load_steps=19 format=3 uid="uid://c8icsrskhxlnl"]
 
 [ext_resource type="Script" path="res://scene/ui/telephone_expanded.gd" id="1_de6sh"]
 [ext_resource type="Texture2D" uid="uid://dmvue7k1u5gb8" path="res://resource/texture/Tele.png" id="1_m3yjn"]
+[ext_resource type="Theme" uid="uid://cm00cp0vxjkhr" path="res://resource/theme.tres" id="1_qph71"]
 [ext_resource type="Texture2D" uid="uid://b8rwgd652c6eg" path="res://resource/texture/back.png" id="3_fhmkc"]
+[ext_resource type="Texture2D" uid="uid://bovd0sbhkvfkb" path="res://resource/texture/TAXI.png" id="3_jr8dk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tot44"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -10,6 +12,53 @@ corner_radius_top_left = 42
 corner_radius_top_right = 42
 corner_radius_bottom_right = 42
 corner_radius_bottom_left = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kyf3p"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejwyj"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnqi8"]
+bg_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86p2u"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se2dd"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h46v5"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ac6mg"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6h07"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wj7oe"]
 bg_color = Color(0.6, 0, 0, 1)
@@ -19,7 +68,8 @@ corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 shadow_size = 7
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6o3u"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdtaw"]
+bg_color = Color(0.505882, 0, 0, 1)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
@@ -50,7 +100,1116 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_qph71")
 script = ExtResource("1_de6sh")
+
+[node name="Setting" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Setting"]
+layout_mode = 0
+offset_left = -667.0
+offset_top = 306.0
+offset_right = -260.0
+offset_bottom = 1196.0
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tot44")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Setting"]
+custom_minimum_size = Vector2(407, 407)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -686.0
+offset_top = -324.0
+offset_right = 648.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 52
+
+[node name="Panel" type="Panel" parent="Setting/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kyf3p")
+
+[node name="Label" type="Label" parent="Setting/VBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 63
+text = "Setting"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Control2" type="Control" parent="Setting/VBoxContainer"]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Setting/VBoxContainer/Control2"]
+layout_mode = 0
+offset_left = 142.0
+offset_right = 577.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 60
+text = "Master Volume:"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Setting/VBoxContainer/Control2"]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 19.0
+offset_right = 1269.0
+offset_bottom = 35.0
+max_value = 30.0
+value = 30.0
+
+[node name="Control4" type="Control" parent="Setting/VBoxContainer"]
+custom_minimum_size = Vector2(0, 61)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Setting/VBoxContainer"]
+custom_minimum_size = Vector2(0, 66)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Button" type="Button" parent="Setting/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -15.5
+offset_right = 58.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 54
+text = "Exit the menu"
+
+[node name="Control3" type="Control" parent="Setting/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Button" type="Button" parent="Setting/VBoxContainer/Control3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -15.5
+offset_right = 58.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 54
+text = "Exit the game"
+
+[node name="Taxi" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Taxi"]
+layout_mode = 0
+offset_left = -667.0
+offset_top = 306.0
+offset_right = -260.0
+offset_bottom = 1196.0
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tot44")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Taxi"]
+custom_minimum_size = Vector2(407, 407)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -686.0
+offset_top = -324.0
+offset_right = 648.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 52
+
+[node name="Panel" type="Panel" parent="Taxi/VBoxContainer"]
+self_modulate = Color(1, 1, 0, 1)
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kyf3p")
+
+[node name="Label" type="Label" parent="Taxi/VBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 63
+text = "Cat Taxi"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Label" type="Label" parent="Taxi/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "Choose a location"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Taxi/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 125
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Taxi/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_86p2u")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Taxi/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer2/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_se2dd")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "City"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Taxi/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer3/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h46v5")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "Laboratory"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Taxi/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer4"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer4/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ac6mg")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "Park"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Photoapparat" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PhotoGalery" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="PhotoGalery"]
+layout_mode = 0
+offset_left = -667.0
+offset_top = 306.0
+offset_right = -260.0
+offset_bottom = 1196.0
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tot44")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PhotoGalery"]
+custom_minimum_size = Vector2(407, 407)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -686.0
+offset_top = -324.0
+offset_right = 648.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="PhotoGalery/VBoxContainer"]
+self_modulate = Color(0.243137, 1, 0, 1)
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kyf3p")
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/Panel"]
+custom_minimum_size = Vector2(488, 0)
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 63
+text = "Photo Galery"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PhotoGalery/VBoxContainer"]
+custom_minimum_size = Vector2(0, 477)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 76
+theme_override_constants/v_separation = 38
+columns = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer2/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer3/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer4"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer4/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer5"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer5/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer6" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer6"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer6/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer7" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer7"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer7/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer8" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer8"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer8/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer8"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer9" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer9"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer9/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer9"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer10" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer10"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer10/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer10"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer11" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer11"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer11/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer11"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer12" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer12"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer12/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer12"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer13" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer13"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer13/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer13"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer14" type="VBoxContainer" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer14"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer14/Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/icon_max_width = 130
+theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n6h07")
+icon = ExtResource("3_jr8dk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="PhotoGalery/VBoxContainer/ScrollContainer/GridContainer/VBoxContainer14"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
+theme_override_font_sizes/font_size = 37
+text = "The Villain's Lair"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Locator" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Locator"]
+layout_mode = 0
+offset_left = -667.0
+offset_top = 306.0
+offset_right = -260.0
+offset_bottom = 1196.0
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tot44")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Locator"]
+custom_minimum_size = Vector2(407, 407)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -686.0
+offset_top = -324.0
+offset_right = 648.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Locator/VBoxContainer"]
+self_modulate = Color(0.803922, 0.537255, 0.34902, 1)
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kyf3p")
+
+[node name="Label" type="Label" parent="Locator/VBoxContainer/Panel"]
+custom_minimum_size = Vector2(335, 0)
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 63
+text = "Locator"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Locator/VBoxContainer"]
+custom_minimum_size = Vector2(0, 523)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Locator/VBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(1332, 103)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 66
+text = " Cat # 1 Long cat"
+
+[node name="Label2" type="Label" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "   There you need find"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 66
+text = " Cat # 1 Long cat"
+
+[node name="Label2" type="Label" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "   There you need find"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 66
+text = " Cat # 1 Long cat"
+
+[node name="Label2" type="Label" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "   There you need find"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 66
+text = " Cat # 1 Long cat"
+
+[node name="Label2" type="Label" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "   There you need find"
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 66
+text = " Cat # 1 Long cat"
+
+[node name="Label2" type="Label" parent="Locator/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 74
+text = "   There you need find"
+
+[node name="Button" type="Button" parent="." groups=["telephone"]]
+layout_mode = 0
+offset_left = 515.0
+offset_top = -289.0
+offset_right = 642.0
+offset_bottom = -242.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wj7oe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdtaw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_stm06")
+theme_override_styles/focus = SubResource("StyleBoxFlat_eiw5o")
+icon = ExtResource("3_fhmkc")
+icon_alignment = 1
+expand_icon = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -67,83 +1226,10 @@ grow_horizontal = 2
 grow_vertical = 2
 rotation = -1.5708
 scale = Vector2(1.5, 1.5)
+mouse_filter = 2
 texture = ExtResource("1_m3yjn")
 
-[node name="Setting" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
 
-[node name="Panel" type="Panel" parent="Setting"]
-offset_left = -667.0
-offset_top = 306.0
-offset_right = -260.0
-offset_bottom = 1196.0
-rotation = -1.5708
-scale = Vector2(1.5, 1.5)
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_tot44")
-
-[node name="Taxi" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Panel" type="Panel" parent="Taxi"]
-offset_left = -667.0
-offset_top = 306.0
-offset_right = -260.0
-offset_bottom = 1196.0
-rotation = -1.5708
-scale = Vector2(1.5, 1.5)
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_tot44")
-
-[node name="Photoapparat" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="PhotoGalery" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Panel" type="Panel" parent="PhotoGalery"]
-offset_left = -667.0
-offset_top = 306.0
-offset_right = -260.0
-offset_bottom = 1196.0
-rotation = -1.5708
-scale = Vector2(1.5, 1.5)
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_tot44")
-
-[node name="Locator" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Panel" type="Panel" parent="Locator"]
-offset_left = -667.0
-offset_top = 306.0
-offset_right = -260.0
-offset_bottom = 1196.0
-rotation = -1.5708
-scale = Vector2(1.5, 1.5)
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_tot44")
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 515.0
-offset_top = -289.0
-offset_right = 642.0
-offset_bottom = -242.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_wj7oe")
-theme_override_styles/hover = SubResource("StyleBoxFlat_m6o3u")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_stm06")
-theme_override_styles/focus = SubResource("StyleBoxFlat_eiw5o")
-icon = ExtResource("3_fhmkc")
-icon_alignment = 1
-expand_icon = true
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
