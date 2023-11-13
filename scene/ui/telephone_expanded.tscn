@@ -490,11 +490,13 @@ horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="Photoapparat" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="Photoapparat"]
+[node name="Camera_aim" type="TextureRect" parent="Photoapparat"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -533,6 +535,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_md77d")
 
 [node name="Get_Picture" type="Button" parent="Photoapparat"]
 custom_minimum_size = Vector2(16, 22)
+layout_mode = 0
 offset_left = 569.0
 offset_top = -16.0
 offset_right = 585.0

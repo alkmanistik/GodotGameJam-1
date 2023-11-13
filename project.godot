@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Global="*res://global/global.gd"
 
 [display]
 
@@ -25,6 +26,10 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/always_on_top=true
 window/stretch/mode="canvas_items"
+
+[editor]
+
+movie_writer/movie_file="D:/temp/test.avi"
 
 [editor_plugins]
 

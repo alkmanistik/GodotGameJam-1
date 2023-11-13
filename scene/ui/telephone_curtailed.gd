@@ -10,15 +10,24 @@ var show_big_phone = false
 
 signal show_phone(tag)
 
+func unlock_locator():
+	%TextureRect.visible = false
+	%to_locator.disabled = false
+
 func update_label(now_cat,max_cat):
 	%Label.text = str(now_cat) + " / " + str(max_cat)
 
 func update_time_label():
 	var temp = Time.get_time_dict_from_system()
-	%Time_Label.text = str(temp.hour)+":"+str(temp.minute)
+	if temp.minute >= 10:
+		%Time_Label.text = str(temp.hour)+":"+str(temp.minute)
+	else:
+		%Time_Label.text = str(temp.hour)+":0"+str(temp.minute)
 
 func _ready():
 	update_time_label()
+	if Global.unlock_locator:
+		unlock_locator()
 
 func to_usual_pos() -> void:
 	var tween = create_tween()
@@ -97,9 +106,21 @@ func del_number():
 		update_number()
 
 func call_number():
-	
-	number_tel = ""
 	%Number.text = "Calling"
+	await get_tree().create_timer(0.1).timeout
+	%Number.text = "Calling."
+	await get_tree().create_timer(0.1).timeout
+	%Number.text = "Calling.."
+	await get_tree().create_timer(0.1).timeout
+	%Number.text = "Calling..."
+	await get_tree().create_timer(0.1).timeout
+	match (number_tel):
+		"911","112":
+			%Number.text = "Unlock Locator"
+			Global.unlock_locator = true
+			unlock_locator()
+			Global.save_game()
+	number_tel = ""
 
 
 

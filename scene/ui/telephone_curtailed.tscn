@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dglfqj6a2ah7v"]
+[gd_scene load_steps=25 format=3 uid="uid://dglfqj6a2ah7v"]
 
 [ext_resource type="Script" path="res://scene/ui/telephone_curtailed.gd" id="1_8744x"]
 [ext_resource type="Theme" uid="uid://cm00cp0vxjkhr" path="res://resource/theme.tres" id="2_eo6n5"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cou64yejlxtmb" path="res://resource/texture/gallery.png" id="10_cetx2"]
 [ext_resource type="Texture2D" uid="uid://5jt8w57vwp4j" path="res://resource/texture/navigation.png" id="11_bme5a"]
 [ext_resource type="Texture2D" uid="uid://cf5h1fdhk4sg" path="res://resource/texture/settings.png" id="12_8838r"]
+[ext_resource type="Texture2D" uid="uid://vklvivn42oys" path="res://resource/texture/padlock.png" id="12_h21a2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3vmp"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -511,12 +512,15 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
 [node name="to_locator" type="Button" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer5"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_5audk")
+disabled = true
 icon = ExtResource("11_bme5a")
 icon_alignment = 1
 expand_icon = true
@@ -529,6 +533,18 @@ theme_override_font_sizes/font_size = 27
 text = "Locator"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer5/Label"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+offset_left = 38.0
+offset_top = -114.0
+offset_right = 113.0
+offset_bottom = -39.0
+mouse_filter = 0
+texture = ExtResource("12_h21a2")
+expand_mode = 4
 
 [node name="VBoxContainer6" type="VBoxContainer" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(150, 150)

@@ -4,6 +4,7 @@ var usual_pos = Vector2(960,540)
 var another_pos = Vector2(960,1540)
 var temp_page = "Setting"
 var show_small_phone = true
+var photo = 0
 
 signal show_mini_phone()
 
@@ -34,6 +35,11 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _on_get_picture_pressed() -> void:
-	var image = get_viewport().get_texture().get_data()
-	image.flip_y()
-	image.save_png()
+	%Camera_aim.visible = false
+	await get_tree().create_timer(0.1).timeout
+	var image = get_viewport().get_texture().get_image()
+	%Camera_aim.visible = true
+	image.blend_rect(image, Rect2i(%Camera_aim.global_position,Vector2(405,405)), Vector2(0,0))
+	image.crop(405,405)
+	image.save_png(Global.path_to_save_picture+str(photo)+".png")
+	photo+=1

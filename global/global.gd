@@ -9,6 +9,7 @@ var find_cat = 0
 var find_cat_city = 0
 var find_cat_laboratory = 0
 var find_cat_park = 0
+var unlock_locator = false
 
 var cat_dict_null = {}
 var inventory_dict_null = {}
@@ -27,6 +28,7 @@ func save_game() -> void:
 	config.set_value(section_name, "find_cat_park", find_cat_park)
 	config.set_value(section_name, "cat_dict", cat_dict)
 	config.set_value(section_name, "inventory_dict", inventory_dict)
+	config.set_value(section_name, "unlock_locator", unlock_locator)
 	config.save(path_to_save_file)
 
 func load_game() -> void:
@@ -39,4 +41,5 @@ func load_game() -> void:
 	find_cat_park = config.get_value(section_name, "find_cat_park", 0)
 	cat_dict = config.get_value(section_name, "cat_dict", {})
 	inventory_dict = config.get_value(section_name, "inventory_dict", {})
+	unlock_locator = config.get_value(section_name, "unlock_locator", false)
 
