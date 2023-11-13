@@ -1,11 +1,18 @@
-[gd_scene load_steps=15 format=3 uid="uid://dglfqj6a2ah7v"]
+[gd_scene load_steps=24 format=3 uid="uid://dglfqj6a2ah7v"]
 
 [ext_resource type="Script" path="res://scene/ui/telephone_curtailed.gd" id="1_8744x"]
 [ext_resource type="Theme" uid="uid://cm00cp0vxjkhr" path="res://resource/theme.tres" id="2_eo6n5"]
 [ext_resource type="Texture2D" uid="uid://cktswj85py507" path="res://resource/texture/kotik1.png" id="3_w1t25"]
 [ext_resource type="Texture2D" uid="uid://b8rwgd652c6eg" path="res://resource/texture/back.png" id="4_h05sr"]
-[ext_resource type="Texture2D" uid="uid://bovd0sbhkvfkb" path="res://resource/texture/TAXI.png" id="5_8rq22"]
+[ext_resource type="Texture2D" uid="uid://dcnp1fxp0gcmx" path="res://resource/texture/telephone-call.png" id="5_f403d"]
 [ext_resource type="Texture2D" uid="uid://dmvue7k1u5gb8" path="res://resource/texture/Tele.png" id="5_np4p7"]
+[ext_resource type="Texture2D" uid="uid://dbpkufnvp3bjv" path="res://resource/texture/arrow.png" id="6_xxrpo"]
+[ext_resource type="Texture2D" uid="uid://c4t0l4ilne2i6" path="res://resource/texture/CatTaxi icon.png" id="7_b6js6"]
+[ext_resource type="Texture2D" uid="uid://c6uatwqldcdi0" path="res://resource/texture/phone.png" id="8_iksk7"]
+[ext_resource type="Texture2D" uid="uid://blxouyt3f8frp" path="res://resource/texture/camera.png" id="9_ik74j"]
+[ext_resource type="Texture2D" uid="uid://cou64yejlxtmb" path="res://resource/texture/gallery.png" id="10_cetx2"]
+[ext_resource type="Texture2D" uid="uid://5jt8w57vwp4j" path="res://resource/texture/navigation.png" id="11_bme5a"]
+[ext_resource type="Texture2D" uid="uid://cf5h1fdhk4sg" path="res://resource/texture/settings.png" id="12_8838r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3vmp"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -18,6 +25,40 @@ corner_radius_bottom_left = 42
 bg_color = Color(0.341176, 0.341176, 0.341176, 1)
 corner_radius_top_left = 42
 corner_radius_top_right = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqta7"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.309804, 0.309804, 0.309804, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+expand_margin_left = 25.0
+expand_margin_top = 21.0
+expand_margin_right = 25.0
+expand_margin_bottom = 21.0
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tdvd"]
+bg_color = Color(0.815686, 0.815686, 0.815686, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+expand_margin_left = 25.0
+expand_margin_top = 21.0
+expand_margin_right = 25.0
+expand_margin_bottom = 21.0
+shadow_size = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rugpn"]
 bg_color = Color(0.6, 0, 0, 1)
@@ -136,11 +177,13 @@ text = "13:24"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
+[node name="Telephone_app" type="VBoxContainer" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 2
+theme_override_constants/separation = 50
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Telephone_app"]
 layout_mode = 2
 theme = ExtResource("2_eo6n5")
 theme_override_font_sizes/font_size = 53
@@ -148,7 +191,8 @@ text = "Telephone"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="Panel/VBoxContainer/VBoxContainer"]
+[node name="Number" type="Label" parent="Panel/VBoxContainer/Telephone_app"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_eo6n5")
 theme_override_font_sizes/font_size = 50
@@ -156,11 +200,161 @@ text = "Empty number"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer/Telephone_app"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 75
 columns = 3
 
-[node name="Button2" type="Button" parent="Panel/VBoxContainer/VBoxContainer" groups=["telephone"]]
+[node name="Button" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+text = "1"
+
+[node name="Button2" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+text = "2"
+
+[node name="Button3" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+text = "3"
+
+[node name="Button4" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+text = "4"
+
+[node name="Button5" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+text = "5"
+
+[node name="Button6" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+text = "6"
+
+[node name="Button7" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+text = "7"
+
+[node name="Button8" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+text = "8"
+
+[node name="Button9" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+text = "9"
+
+[node name="Button10" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+
+[node name="Button11" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+text = "0"
+
+[node name="Button12" type="Button" parent="Panel/VBoxContainer/Telephone_app/GridContainer"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vqta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4tdvd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vqta7")
+expand_icon = true
+
+[node name="Button2" type="Button" parent="Panel/VBoxContainer/Telephone_app"]
 custom_minimum_size = Vector2(0, 57)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_rugpn")
@@ -171,7 +365,32 @@ icon = ExtResource("4_h05sr")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/Telephone_app/Button2"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = -81.0
+offset_right = 95.0
+offset_bottom = -41.0
+mouse_filter = 2
+texture = ExtResource("5_f403d")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/VBoxContainer/Telephone_app/Button2"]
+layout_mode = 0
+offset_left = 283.0
+offset_top = -75.0
+offset_right = 323.0
+offset_bottom = -48.0
+mouse_filter = 2
+texture = ExtResource("6_xxrpo")
+expand_mode = 2
+
+[node name="Menu" type="VBoxContainer" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Menu"]
 layout_mode = 2
 theme = ExtResource("2_eo6n5")
 theme_override_font_sizes/font_size = 53
@@ -179,34 +398,34 @@ text = "Apps:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/Menu"]
 layout_mode = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_right = 25
 
-[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer/Menu/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_constants/h_separation = 50
 columns = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/MarginContainer/GridContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="to_taxi" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer"]
+[node name="to_taxi" type="Button" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
-icon = ExtResource("5_8rq22")
+icon = ExtResource("7_b6js6")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
@@ -215,22 +434,22 @@ text = "Cat Taxi"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/VBoxContainer/MarginContainer/GridContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="to_telephone" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer2"]
+[node name="to_telephone" type="Button" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
-icon = ExtResource("5_8rq22")
+icon = ExtResource("8_iksk7")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer2"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
@@ -239,22 +458,22 @@ text = "Telephone"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/VBoxContainer/MarginContainer/GridContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="to_camera" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer3"]
+[node name="to_camera" type="Button" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer3"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
-icon = ExtResource("5_8rq22")
+icon = ExtResource("9_ik74j")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer3"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer3"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
@@ -263,46 +482,46 @@ text = "Camera"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="Panel/VBoxContainer/MarginContainer/GridContainer"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="to_galery" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer4"]
+[node name="to_gallery" type="Button" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer4"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
-icon = ExtResource("5_8rq22")
+icon = ExtResource("10_cetx2")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer4"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer4"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
 theme_override_font_sizes/font_size = 27
-text = "Galery"
+text = "Gallery"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="VBoxContainer5" type="VBoxContainer" parent="Panel/VBoxContainer/MarginContainer/GridContainer"]
+[node name="VBoxContainer5" type="VBoxContainer" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="to_locator" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer5"]
+[node name="to_locator" type="Button" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer5"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
-icon = ExtResource("5_8rq22")
+icon = ExtResource("11_bme5a")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer5"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer5"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
@@ -311,22 +530,22 @@ text = "Locator"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="VBoxContainer6" type="VBoxContainer" parent="Panel/VBoxContainer/MarginContainer/GridContainer"]
+[node name="VBoxContainer6" type="VBoxContainer" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="to_settings" type="Button" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer6"]
+[node name="to_settings" type="Button" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer6"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_5audk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pw60y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5audk")
-icon = ExtResource("5_8rq22")
+icon = ExtResource("12_8838r")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer6"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer6"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
@@ -359,12 +578,25 @@ expand_mode = 5
 wait_time = 10.0
 autostart = true
 
-[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer/to_taxi" to="." method="_on_to_taxi_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer2/to_telephone" to="." method="_on_to_telephone_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer3/to_camera" to="." method="_on_to_camera_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer4/to_galery" to="." method="_on_to_galery_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer5/to_locator" to="." method="_on_to_locator_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer/GridContainer/VBoxContainer6/to_settings" to="." method="_on_to_settings_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button10" to="." method="call_number"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button11" to="." method="_on_button_11_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/GridContainer/Button12" to="." method="del_number"]
+[connection signal="pressed" from="Panel/VBoxContainer/Telephone_app/Button2" to="." method="_on_to_telephone_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer/to_taxi" to="." method="_on_to_taxi_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer2/to_telephone" to="." method="_on_to_telephone_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer3/to_camera" to="." method="_on_to_camera_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer4/to_gallery" to="." method="_on_to_galery_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer5/to_locator" to="." method="_on_to_locator_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Menu/MarginContainer/GridContainer/VBoxContainer6/to_settings" to="." method="_on_to_settings_pressed"]
 [connection signal="mouse_entered" from="TextureRect" to="." method="_on_texture_rect_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect" to="." method="_on_texture_rect_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
