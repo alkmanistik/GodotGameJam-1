@@ -1,0 +1,277 @@
+[gd_scene load_steps=15 format=3 uid="uid://b6yqoa4426ocf"]
+
+[ext_resource type="Theme" uid="uid://cm00cp0vxjkhr" path="res://resource/theme.tres" id="1_5x2hn"]
+[ext_resource type="Script" path="res://scene/ui/menu.gd" id="1_g310d"]
+[ext_resource type="Shader" path="res://resource/menu.gdshader" id="2_b6nos"]
+[ext_resource type="Texture2D" uid="uid://dew0y278fwv0g" path="res://resource/texture/menu_cat.png" id="3_d0ren"]
+[ext_resource type="Texture2D" uid="uid://b8rwgd652c6eg" path="res://resource/texture/back.png" id="5_wisu7"]
+[ext_resource type="Texture2D" uid="uid://dmvue7k1u5gb8" path="res://resource/texture/Tele.png" id="6_k26uo"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wxn8c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tkmwq"]
+shader = ExtResource("2_b6nos")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yn84h"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+corner_radius_top_left = 42
+corner_radius_top_right = 42
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_447rh"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmp2f"]
+bg_color = Color(0.6, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gu1cw"]
+bg_color = Color(0.505882, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ho6jd"]
+bg_color = Color(0.486275, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pj07i"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource("1_g310d")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.54902, 0.54902, 0.54902, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_wxn8c")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_tkmwq")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -607.0
+offset_top = -35.0
+offset_right = 2458.0
+offset_bottom = 3307.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.481711
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_d0ren")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="MenuBar" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5x2hn")
+
+[node name="Grid" type="GridContainer" parent="MenuBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.5
+offset_top = -292.0
+offset_right = 225.5
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/v_separation = 80
+
+[node name="New Game" type="Button" parent="MenuBar/Grid"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "New Game"
+
+[node name="New Game +" type="Button" parent="MenuBar/Grid"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "New Game +
+"
+
+[node name="Settings" type="Button" parent="MenuBar/Grid"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Settings"
+
+[node name="Exit" type="Button" parent="MenuBar/Grid"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Exit"
+
+[node name="Settings" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2000.0
+offset_bottom = 2000.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5x2hn")
+
+[node name="Setting" type="Control" parent="Settings"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 961.0
+offset_top = 540.0
+offset_right = 1001.0
+offset_bottom = 580.0
+
+[node name="Panel" type="Panel" parent="Settings/Setting"]
+layout_mode = 0
+offset_left = -667.0
+offset_top = 306.0
+offset_right = -260.0
+offset_bottom = 1196.0
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxFlat_yn84h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Setting"]
+custom_minimum_size = Vector2(407, 407)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -686.0
+offset_top = -324.0
+offset_right = 648.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 52
+
+[node name="Panel" type="Panel" parent="Settings/Setting/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_447rh")
+
+[node name="Label" type="Label" parent="Settings/Setting/VBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 63
+text = "Setting"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Control2" type="Control" parent="Settings/Setting/VBoxContainer"]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Settings/Setting/VBoxContainer/Control2"]
+layout_mode = 0
+offset_left = 142.0
+offset_right = 577.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 60
+text = "Master Volume:"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Settings/Setting/VBoxContainer/Control2"]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 19.0
+offset_right = 1269.0
+offset_bottom = 35.0
+min_value = -80.0
+max_value = 0.0
+
+[node name="Control3" type="Control" parent="Settings/Setting/VBoxContainer"]
+custom_minimum_size = Vector2(0, 73)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Settings/Setting/VBoxContainer/Control3"]
+layout_mode = 0
+offset_left = 142.0
+offset_right = 577.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 60
+text = "Language"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="Settings/Setting/VBoxContainer/Control3"]
+layout_mode = 0
+offset_left = 763.0
+offset_top = 15.0
+offset_right = 1154.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 25
+alignment = 1
+item_count = 2
+selected = 0
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Russian"
+popup/item_1/id = 1
+
+[node name="Close_settings" type="Button" parent="Settings/Setting"]
+offset_left = 507.0
+offset_top = -287.0
+offset_right = 634.0
+offset_bottom = -240.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rmp2f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gu1cw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ho6jd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_pj07i")
+icon = ExtResource("5_wisu7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Settings"]
+modulate = Color(0.25098, 0.25098, 0.25098, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -688.0
+offset_top = 342.0
+offset_right = -232.0
+offset_bottom = 1260.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+texture = ExtResource("6_k26uo")
+
+[connection signal="pressed" from="MenuBar/Grid/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MenuBar/Grid/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Settings/Setting/Close_settings" to="." method="_on_close_settings_pressed"]

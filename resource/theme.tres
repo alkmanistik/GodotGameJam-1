@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cm00cp0vxjkhr"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cm00cp0vxjkhr"]
 
 [ext_resource type="FontFile" uid="uid://cksj8xedfpn66" path="res://resource/fonts/MouldyCheeseRegular-WyMWG.ttf" id="1_ux872"]
 
@@ -71,6 +71,28 @@ shadow_color = Color(0, 0, 0, 0.819608)
 shadow_size = 5
 shadow_offset = Vector2(3, 2)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynpdi"]
+bg_color = Color(0.541176, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bx7ed"]
+bg_color = Color(0.678431, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+shadow_color = Color(0, 0, 0, 0.819608)
+shadow_size = 5
+shadow_offset = Vector2(7, 8)
+
 [resource]
 Button/fonts/font = ExtResource("1_ux872")
 Button/styles/focus = SubResource("StyleBoxFlat_kcib4")
@@ -78,3 +100,8 @@ Button/styles/hover = SubResource("StyleBoxFlat_yxu1f")
 Button/styles/normal = SubResource("StyleBoxFlat_h58h6")
 Button/styles/pressed = SubResource("StyleBoxFlat_4uae5")
 Label/fonts/font = ExtResource("1_ux872")
+PopupMenu/constants/h_separation = 21
+PopupMenu/font_sizes/font_size = 40
+PopupMenu/fonts/font = ExtResource("1_ux872")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_ynpdi")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_bx7ed")
