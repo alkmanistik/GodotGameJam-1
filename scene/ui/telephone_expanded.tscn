@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c8icsrskhxlnl"]
+[gd_scene load_steps=26 format=3 uid="uid://c8icsrskhxlnl"]
 
 [ext_resource type="Script" path="res://scene/ui/telephone_expanded.gd" id="1_de6sh"]
 [ext_resource type="Texture2D" uid="uid://dmvue7k1u5gb8" path="res://resource/texture/Tele.png" id="1_m3yjn"]
@@ -100,6 +100,9 @@ expand_margin_right = 25.0
 expand_margin_bottom = 21.0
 shadow_size = 4
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tec5u"]
+size = Vector2(400, 400)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6h07"]
 corner_radius_top_left = 15
 corner_radius_top_right = 15
@@ -151,6 +154,7 @@ theme = ExtResource("1_qph71")
 script = ExtResource("1_de6sh")
 
 [node name="Setting" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -559,6 +563,12 @@ offset_bottom = 38.0
 mouse_filter = 2
 texture = ExtResource("5_0651x")
 expand_mode = 4
+
+[node name="Area2D" type="Area2D" parent="Photoapparat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Photoapparat/Area2D"]
+position = Vector2(-42, -6)
+shape = SubResource("RectangleShape2D_tec5u")
 
 [node name="PhotoGalery" type="Control" parent="."]
 visible = false
