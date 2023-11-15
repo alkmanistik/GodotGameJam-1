@@ -1,18 +1,18 @@
 extends Control
 
-var usual_pos = Vector2(960,540)
-var another_pos = Vector2(960,1540)
-var temp_page = "Setting"
-var show_small_phone = true
-var photo = 0
+var usual_pos: Vector2 = Vector2(960,540)
+var another_pos: Vector2 = Vector2(960,1540)
+var temp_page: String = "Setting"
+var show_small_phone: bool = true
+var photo: int = 0
 
 signal show_mini_phone()
 
 func open():
-	var tween = create_tween()
+	var tween = create_tween() as Tween
 	tween.tween_property(self, "position", usual_pos, 0.5)
 func close():
-	var tween = create_tween()
+	var tween = create_tween() as Tween
 	tween.tween_property(self, "position", another_pos, 0.5)
 
 func show_tag(tag):

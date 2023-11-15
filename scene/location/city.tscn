@@ -1,5 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6mmjaneuepfo"]
+[gd_scene load_steps=4 format=3 uid="uid://c6mmjaneuepfo"]
 
 [ext_resource type="PackedScene" uid="uid://ek3es5ndcrrn" path="res://scene/location/location.tscn" id="1_ui0pk"]
+[ext_resource type="Script" path="res://scene/location/city.gd" id="2_503lm"]
+[ext_resource type="Texture2D" uid="uid://bkudwn1o6rwgw" path="res://resource/texture/house.png" id="3_6umnd"]
 
 [node name="City" instance=ExtResource("1_ui0pk")]
+script = ExtResource("2_503lm")
+
+[node name="House" type="Sprite2D" parent="." index="9"]
+position = Vector2(1017, 453)
+texture = ExtResource("3_6umnd")

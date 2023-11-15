@@ -241,6 +241,7 @@ popup/item_1/text = "Russian"
 popup/item_1/id = 1
 
 [node name="Close_settings" type="Button" parent="Settings/Setting"]
+layout_mode = 0
 offset_left = 507.0
 offset_top = -287.0
 offset_right = 634.0

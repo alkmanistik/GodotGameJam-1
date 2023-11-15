@@ -1,20 +1,20 @@
 extends Control
 
-var usual_pos = Vector2(1608,1107)
-var another_pos = Vector2(1608,800)
-var hide_pos = Vector2(1608,2000)
-var number_tel = ""
-var simple_text = "Empty Number"
-var overflow_text = "Overflow"
-var show_big_phone = false
+var usual_pos: Vector2 = Vector2(1608,1107)
+var another_pos: Vector2 = Vector2(1608,800)
+var hide_pos: Vector2 = Vector2(1608,2000)
+var number_tel: String = ""
+var simple_text: String = "Empty Number"
+var overflow_text: String = "Overflow"
+var show_big_phone: bool = false
 
-signal show_phone(tag)
+signal show_phone(tag: String)
 
 func unlock_locator():
 	%TextureRect.visible = false
 	%to_locator.disabled = false
 
-func update_label(now_cat,max_cat):
+func update_label(now_cat: int,max_cat: int):
 	%Label.text = str(now_cat) + " / " + str(max_cat)
 
 func update_time_label():
@@ -30,16 +30,16 @@ func _ready():
 		unlock_locator()
 
 func to_usual_pos() -> void:
-	var tween = create_tween()
+	var tween = create_tween() as Tween
 	tween.tween_property(self, "position", usual_pos, 0.5)
 	show_big_phone = false
 
 func to_another_pos() -> void:
-	var tween = create_tween()
+	var tween = create_tween() as Tween
 	tween.tween_property(self, "position", another_pos, 0.5)
 
 func to_hide_pos() -> void:
-	var tween = create_tween()
+	var tween = create_tween() as Tween
 	tween.tween_property(self, "position", hide_pos, 0.5)
 	show_big_phone = true
 
@@ -107,19 +107,29 @@ func del_number():
 
 func call_number():
 	%Number.text = "Calling"
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.2).timeout
 	%Number.text = "Calling."
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.2).timeout
 	%Number.text = "Calling.."
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.2).timeout
 	%Number.text = "Calling..."
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.2).timeout
+	%Number.text = "Calling"
+	await get_tree().create_timer(0.2).timeout
+	%Number.text = "Calling."
+	await get_tree().create_timer(0.2).timeout
+	%Number.text = "Calling.."
+	await get_tree().create_timer(0.2).timeout
+	%Number.text = "Calling..."
+	await get_tree().create_timer(0.2).timeout
 	match (number_tel):
 		"911","112":
 			%Number.text = "Unlock Locator"
 			Global.unlock_locator = true
 			unlock_locator()
 			Global.save_game()
+		_:
+			%Number.text = "Wrong number"
 	number_tel = ""
 
 

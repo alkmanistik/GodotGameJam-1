@@ -2,5 +2,11 @@
 
 [ext_resource type="Script" path="res://scene/cats/cat.gd" id="1_v10bs"]
 
-[node name="Cat" type="Node2D"]
+[node name="Cat" type="Node2D" groups=["Cat"]]
 script = ExtResource("1_v10bs")
+
+[node name="Collision_Cat" type="CollisionShape2D" parent="."]
+
+[node name="Talk_Area" type="Area2D" parent="."]
+
+[node name="Sprite_Cat" type="Sprite2D" parent="."]

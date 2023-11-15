@@ -6,27 +6,27 @@ var path_to_save_picture : String = "user://cats/"
 var section_name : String = "game"
 var section_name_to_global_settings : String = "settings"
 
-var volume = 0
-var language = "english"
+var volume: int = 0
+var language: String = "english"
 
-var find_cat = 0
-var find_cat_city = 0
-var find_cat_laboratory = 0
-var find_cat_park = 0
-var unlock_locator = false
-var location = ""
-var position = Vector2(0,0)
+var find_cat: int = 0
+var find_cat_city: int = 0
+var find_cat_laboratory: int = 0
+var find_cat_park: int = 0
+var unlock_locator: bool = false
+var location: String = ""
+var position:Vector2 = Vector2(0,0)
 
-var cat_dict_null = {}
-var inventory_dict_null = {}
+var cat_dict_null: Dictionary = {}
+var inventory_dict_null: Dictionary = {}
 
-var cat_dict = cat_dict_null
-var inventory_dict = inventory_dict_null
+var cat_dict: Dictionary = cat_dict_null
+var inventory_dict: Dictionary = inventory_dict_null
 
 func _ready() -> void:
 	load_game()
 
-func save_global_settings():
+func save_global_settings() -> void:
 	config.set_value(section_name_to_global_settings, "volume", volume)
 	config.set_value(section_name_to_global_settings, "language", language)
 
@@ -55,4 +55,4 @@ func load_game() -> void:
 	unlock_locator = config.get_value(section_name, "unlock_locator", false)
 	
 	volume = config.get_value(section_name_to_global_settings, "volume", 0)
-	language = config.get_value(section_name_to_global_settings, "language", 0)
+	language = config.get_value(section_name_to_global_settings, "language", "")
