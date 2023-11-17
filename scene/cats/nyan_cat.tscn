@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqsvo7a8gi6a5"]
+
+[ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_4bdj2"]
+
+[node name="Nyan Cat" instance=ExtResource("1_4bdj2")]

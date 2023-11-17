@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2qgfqjj78erq"]
+
+[ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_bb6mu"]
+[ext_resource type="Texture2D" uid="uid://c1jh72m782d5x" path="res://resource/cats/cat01.png" id="2_dcpqm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtiv7"]
+size = Vector2(142, 184)
+
+[node name="Cat Reporter" instance=ExtResource("1_bb6mu")]
+
+[node name="Collision_Cat" parent="." index="0"]
+shape = SubResource("RectangleShape2D_jtiv7")
+
+[node name="Sprite_Cat" parent="." index="1"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_dcpqm")

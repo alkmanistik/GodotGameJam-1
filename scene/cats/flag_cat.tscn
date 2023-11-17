@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjyknopvyc1y5"]
+
+[ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_vnw7g"]
+
+[node name="Flag Cat" instance=ExtResource("1_vnw7g")]

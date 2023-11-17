@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyc7l3j3usi0f"]
+
+[ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_nwex7"]
+
+[node name="Programmer" instance=ExtResource("1_nwex7")]

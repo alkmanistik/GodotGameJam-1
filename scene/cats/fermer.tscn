@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmpva383b3vk1"]
+
+[ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_xy1oy"]
+
+[node name="Fermer" instance=ExtResource("1_xy1oy")]

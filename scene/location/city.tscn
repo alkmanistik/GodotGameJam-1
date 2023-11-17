@@ -1,12 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6mmjaneuepfo"]
+[gd_scene load_steps=10 format=3 uid="uid://c6mmjaneuepfo"]
 
 [ext_resource type="PackedScene" uid="uid://ek3es5ndcrrn" path="res://scene/location/location.tscn" id="1_ui0pk"]
 [ext_resource type="Script" path="res://scene/location/city.gd" id="2_503lm"]
 [ext_resource type="Texture2D" uid="uid://bkudwn1o6rwgw" path="res://resource/texture/house.png" id="3_6umnd"]
+[ext_resource type="PackedScene" uid="uid://d17bbw6hmvqlj" path="res://scene/cats/cat_dog.tscn" id="4_medf7"]
+[ext_resource type="PackedScene" uid="uid://b2qgfqjj78erq" path="res://scene/cats/cat_reporter.tscn" id="5_kcu1w"]
+[ext_resource type="PackedScene" uid="uid://boyvhwjn3p0rj" path="res://scene/cats/long_cat.tscn" id="6_5mjmp"]
+[ext_resource type="PackedScene" uid="uid://bxiv2ny1dr05m" path="res://scene/cats/ninja.tscn" id="7_dy622"]
+[ext_resource type="PackedScene" uid="uid://cjyknopvyc1y5" path="res://scene/cats/flag_cat.tscn" id="8_dh6ir"]
+[ext_resource type="PackedScene" uid="uid://coesx4v2jf83w" path="res://scene/cats/the_masked_cat.tscn" id="9_yp6oy"]
 
 [node name="City" instance=ExtResource("1_ui0pk")]
 script = ExtResource("2_503lm")
 
-[node name="House" type="Sprite2D" parent="." index="9"]
-position = Vector2(1017, 453)
+[node name="House" type="Sprite2D" parent="Objects" index="0"]
+position = Vector2(1422, 606)
 texture = ExtResource("3_6umnd")
+
+[node name="House2" type="Sprite2D" parent="Objects" index="1"]
+position = Vector2(1422, 606)
+texture = ExtResource("3_6umnd")
+
+[node name="House2" type="Sprite2D" parent="Objects/House2" index="0"]
+position = Vector2(501, 0)
+texture = ExtResource("3_6umnd")
+
+[node name="Cat Dog" parent="Cats" index="0" instance=ExtResource("4_medf7")]
+
+[node name="Cat Reporter" parent="Cats" index="1" instance=ExtResource("5_kcu1w")]
+position = Vector2(1367, 1025)
+collision_mask = 17
+
+[node name="Long Cat" parent="Cats" index="2" instance=ExtResource("6_5mjmp")]
+
+[node name="Ninja" parent="Cats" index="3" instance=ExtResource("7_dy622")]
+
+[node name="Flag Cat" parent="Cats" index="4" instance=ExtResource("8_dh6ir")]
+
+[node name="The Masked Cat" parent="Cats" index="5" instance=ExtResource("9_yp6oy")]
+
+[node name="Start" parent="." index="6"]
+position = Vector2(1750, 1160)

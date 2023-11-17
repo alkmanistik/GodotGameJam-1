@@ -4,7 +4,6 @@ var usual_pos: Vector2 = Vector2(960,540)
 var another_pos: Vector2 = Vector2(960,1540)
 var temp_page: String = "Setting"
 var show_small_phone: bool = true
-var photo: int = 0
 
 signal show_mini_phone()
 
@@ -41,5 +40,6 @@ func _on_get_picture_pressed() -> void:
 	%Camera_aim.visible = true
 	image.blend_rect(image, Rect2i(%Camera_aim.global_position,Vector2(405,405)), Vector2(0,0))
 	image.crop(405,405)
-	image.save_png(Global.path_to_save_picture+str(photo)+".png")
-	photo+=1
+	if !Global.cat_dict[Global.temp_cat][1]:
+		Global.temp_cat = "default"
+	image.save_png(Global.path_to_save_picture+Global.temp_cat+".png")

@@ -24,6 +24,7 @@ Global="*res://global/global.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/always_on_top=true
 window/stretch/mode="canvas_items"
 
 [editor]
@@ -87,7 +88,7 @@ right={
 2d_physics/layer_2="NPC"
 2d_physics/layer_3="Interactive_item"
 2d_physics/layer_4="Object"
-2d_physics/layer_5="AreaClickZone"
+2d_physics/layer_5="Camera_area"
 
 [physics]
 

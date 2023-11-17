@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scene/player/player.gd" id="1_uuau7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tdh8k"]
+radius = 100.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 8
@@ -11,4 +12,5 @@ script = ExtResource("1_uuau7")
 [node name="Camera" type="Camera2D" parent="."]
 
 [node name="Player_Collision" type="CollisionShape2D" parent="."]
+position = Vector2(-42, -6)
 shape = SubResource("CircleShape2D_tdh8k")

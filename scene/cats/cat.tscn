@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" path="res://scene/cats/cat.gd" id="1_v10bs"]
 
-[node name="Cat" type="Node2D" groups=["Cat"]]
+[node name="Cat" type="Area2D" groups=["Cat"]]
+collision_layer = 2
+collision_mask = 16
 script = ExtResource("1_v10bs")
 
 [node name="Collision_Cat" type="CollisionShape2D" parent="."]
 
-[node name="Talk_Area" type="Area2D" parent="."]
-
 [node name="Sprite_Cat" type="Sprite2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_camera_area_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_camera_area_body_exited"]
