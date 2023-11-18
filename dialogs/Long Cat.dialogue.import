@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bisfluehjywlh"
+path="res://.godot/imported/Long Cat.dialogue-f0a2d9b212b9884600dcd1821a9a6b14.tres"
+
+[deps]
+
+source_file="res://dialogs/Long Cat.dialogue"
+dest_files=["res://.godot/imported/Long Cat.dialogue-f0a2d9b212b9884600dcd1821a9a6b14.tres"]
+
+[params]
+
+defaults=true

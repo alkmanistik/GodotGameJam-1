@@ -33,3 +33,11 @@ func _on_camera_area_body_exited(_body: Node2D) -> void:
 #func _unhandled_input(_event: InputEvent) -> void:
 #	if Input.is_action_just_pressed("action"):
 #		disable_hide()
+
+
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event.is_pressed():
+		click()
+
+func click():
+	DialogueManager.show_dialogue_balloon(load("res://dialogs/"+name+".dialogue"), "start")

@@ -26,20 +26,23 @@ texture = ExtResource("3_6umnd")
 position = Vector2(1923, 606)
 texture = ExtResource("3_6umnd")
 
-[node name="Cat Dog" parent="Cats" index="0" instance=ExtResource("4_medf7")]
-
-[node name="Cat Reporter" parent="Cats" index="1" instance=ExtResource("5_kcu1w")]
+[node name="Cat Reporter" parent="Cats" index="0" groups=["Cat"] instance=ExtResource("5_kcu1w")]
 position = Vector2(1367, 1025)
 collision_mask = 17
 
-[node name="Long Cat" parent="Cats" index="2" instance=ExtResource("6_5mjmp")]
+[node name="Long Cat" parent="Cats" index="1" groups=["Cat"] instance=ExtResource("6_5mjmp")]
+position = Vector2(865, 875)
 
-[node name="Ninja" parent="Cats" index="3" instance=ExtResource("7_dy622")]
+[node name="Ninja" parent="Cats" index="2" groups=["Cat"] instance=ExtResource("7_dy622")]
+position = Vector2(1989, 1706)
 
-[node name="Flag Cat" parent="Cats" index="4" instance=ExtResource("8_dh6ir")]
+[node name="Flag Cat" parent="Cats" index="3" groups=["Cat"] instance=ExtResource("8_dh6ir")]
 
-[node name="The Masked Cat" parent="Cats" index="5" instance=ExtResource("9_yp6oy")]
+[node name="The Masked Cat" parent="Cats" index="4" groups=["Cat"] instance=ExtResource("9_yp6oy")]
 script = ExtResource("10_y416i")
+
+[node name="Cat Dog" parent="Cats" index="5" groups=["Cat"] instance=ExtResource("4_medf7")]
+position = Vector2(2160, 1012)
 
 [node name="Start" parent="." index="6"]
 position = Vector2(1750, 1160)

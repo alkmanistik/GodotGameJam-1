@@ -13,17 +13,17 @@
 
 [node name="Laboratory" instance=ExtResource("1_2orj5")]
 
-[node name="Shroedinger\'s Cat" parent="Cats" index="0" instance=ExtResource("2_yweo7")]
+[node name="Shroedinger\'s Cat" parent="Cats" index="0" groups=["Cat"] instance=ExtResource("2_yweo7")]
 script = ExtResource("3_jwd6i")
 
-[node name="Nyan Cat" parent="Cats" index="1" instance=ExtResource("3_4a6tb")]
+[node name="Nyan Cat" parent="Cats" index="1" groups=["Cat"] instance=ExtResource("3_4a6tb")]
 
-[node name="Gigachad" parent="Cats" index="2" instance=ExtResource("4_6k7nk")]
+[node name="Gigachad" parent="Cats" index="2" groups=["Cat"] instance=ExtResource("4_6k7nk")]
 
-[node name="Amogus" parent="Cats" index="3" instance=ExtResource("5_tfv7l")]
+[node name="Amogus" parent="Cats" index="3" groups=["Cat"] instance=ExtResource("5_tfv7l")]
 script = ExtResource("7_vehfs")
 
-[node name="Programmer" parent="Cats" index="4" instance=ExtResource("6_lga3c")]
+[node name="Programmer" parent="Cats" index="4" groups=["Cat"] instance=ExtResource("6_lga3c")]
 script = ExtResource("9_b788c")
 
-[node name="Scientist" parent="Cats" index="5" instance=ExtResource("7_1ks2n")]
+[node name="Scientist" parent="Cats" index="5" groups=["Cat"] instance=ExtResource("7_1ks2n")]

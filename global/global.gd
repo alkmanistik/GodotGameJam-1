@@ -25,7 +25,7 @@ var cat_dict_null: Dictionary = {"Cat Dog": [0,0], "The Masked Cat": [0,0], "Nin
 "Amogus": [0,0],"Programmer": [0,0],"Scientist": [0,0],
 "Fluffy": [0,0],"Lake Cat": [0,0],"Jumping Cat": [0,0],
 "Fermer": [0,0],"Strange cat": [0,0],"Archaeologist": [0,0]}
-var inventory_dict_null: Dictionary = {}
+var inventory_dict_null: Dictionary = {"Bone": 0, "Pumpkin": 0, "valerian": 0}
 
 var cat_dict: Dictionary = cat_dict_null
 var inventory_dict: Dictionary = inventory_dict_null
@@ -63,3 +63,8 @@ func load_game() -> void:
 	
 	volume = config.get_value(section_name_to_global_settings, "volume", 0)
 	language = config.get_value(section_name_to_global_settings, "language", "")
+
+func secret_func(name_cat):
+	for i in get_tree().get_nodes_in_group("cat"):
+		if i.name == name_cat:
+			i.secret_func()

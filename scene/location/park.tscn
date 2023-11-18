@@ -11,15 +11,15 @@
 
 [node name="Park" instance=ExtResource("1_e61p4")]
 
-[node name="Fluffy" parent="Cats" index="0" instance=ExtResource("2_ol8xe")]
+[node name="Fluffy" parent="Cats" index="0" groups=["Cat"] instance=ExtResource("2_ol8xe")]
 script = ExtResource("3_wl0md")
 
-[node name="Lake Cat" parent="Cats" index="1" instance=ExtResource("3_lgok4")]
+[node name="Lake Cat" parent="Cats" index="1" groups=["Cat"] instance=ExtResource("3_lgok4")]
 
-[node name="Jumping Cat" parent="Cats" index="2" instance=ExtResource("4_7vife")]
+[node name="Jumping Cat" parent="Cats" index="2" groups=["Cat"] instance=ExtResource("4_7vife")]
 
-[node name="Fermer" parent="Cats" index="3" instance=ExtResource("5_3cbl2")]
+[node name="Fermer" parent="Cats" index="3" groups=["Cat"] instance=ExtResource("5_3cbl2")]
 
-[node name="Strange Cat" parent="Cats" index="4" instance=ExtResource("6_41wpu")]
+[node name="Strange Cat" parent="Cats" index="4" groups=["Cat"] instance=ExtResource("6_41wpu")]
 
-[node name="Archaeologist" parent="Cats" index="5" instance=ExtResource("7_v8tay")]
+[node name="Archaeologist" parent="Cats" index="5" groups=["Cat"] instance=ExtResource("7_v8tay")]

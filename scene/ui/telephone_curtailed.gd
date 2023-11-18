@@ -10,6 +10,7 @@ var show_big_phone: bool = false
 var reporter_number: String = "12412"
 
 signal show_phone(tag: String)
+signal disable_hide()
 
 func unlock_locator():
 	%TextureRect.visible = false
@@ -131,6 +132,8 @@ func call_number():
 			Global.save_game()
 		reporter_number:
 			disable_hide.emit()
+			DialogueManager.show_dialogue_balloon(load("res://dialogs/"+"Cat Reporter"+".dialogue"), "call")
+			%Number.text = "Speak"
 		_:
 			%Number.text = "Wrong number"
 	number_tel = ""

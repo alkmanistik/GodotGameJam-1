@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://byg4e52t7bgm5"
+path="res://.godot/imported/Cat Reporter.dialogue-7f7d629e25ef6a8192ff5f32b0090fa2.tres"
+
+[deps]
+
+source_file="res://dialogs/Cat Reporter.dialogue"
+dest_files=["res://.godot/imported/Cat Reporter.dialogue-7f7d629e25ef6a8192ff5f32b0090fa2.tres"]
+
+[params]
+
+defaults=true

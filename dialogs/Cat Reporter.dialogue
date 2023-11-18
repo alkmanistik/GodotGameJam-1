@@ -1,0 +1,20 @@
+~ start_hide
+
+Cat Reporter: Did you want to take a picture of me, meow?
+Cat Reporter: I'm shooting now
+Cat Reporter: Don't bother me
+
+=> END
+
+~ call
+
+Cat Reporter: Boss, is that you?
+Cat Reporter: I stop taking pictures, waiting for new instructions
+
+=> END
+
+~ start_unhide
+
+Cat Reporter: Don't bother me, I'm on the phone.
+
+=> END

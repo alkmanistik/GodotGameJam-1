@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://d17bbw6hmvqlj"]
+[gd_scene load_steps=5 format=3 uid="uid://d17bbw6hmvqlj"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_m3ruw"]
 [ext_resource type="Script" path="res://scene/cats/cat_dog.gd" id="2_wa3di"]
+[ext_resource type="Texture2D" uid="uid://p5b03bsh02iy" path="res://resource/cats/Cat Dog.png" id="3_34hja"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yge0a"]
+size = Vector2(334, 174)
 
 [node name="Cat Dog" instance=ExtResource("1_m3ruw")]
 script = ExtResource("2_wa3di")
+
+[node name="Collision_Cat" parent="." index="0"]
+position = Vector2(-5, 23)
+shape = SubResource("RectangleShape2D_yge0a")
+
+[node name="Sprite_Cat" parent="." index="1"]
+scale = Vector2(-0.6, 0.6)
+texture = ExtResource("3_34hja")

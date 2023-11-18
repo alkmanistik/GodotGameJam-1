@@ -1,5 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxiv2ny1dr05m"]
+[gd_scene load_steps=4 format=3 uid="uid://bxiv2ny1dr05m"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_dhqyj"]
+[ext_resource type="Texture2D" uid="uid://b7yrbqdtfcdjc" path="res://resource/cats/Ninja.png" id="2_t4cod"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ubmx"]
+radius = 117.631
 
 [node name="Ninja" instance=ExtResource("1_dhqyj")]
+
+[node name="Collision_Cat" parent="." index="0"]
+shape = SubResource("CircleShape2D_3ubmx")
+
+[node name="Sprite_Cat" parent="." index="1"]
+rotation = -0.507891
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_t4cod")
