@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6mmjaneuepfo"]
+[gd_scene load_steps=11 format=3 uid="uid://c6mmjaneuepfo"]
 
 [ext_resource type="PackedScene" uid="uid://ek3es5ndcrrn" path="res://scene/location/location.tscn" id="1_ui0pk"]
 [ext_resource type="Script" path="res://scene/location/city.gd" id="2_503lm"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bxiv2ny1dr05m" path="res://scene/cats/ninja.tscn" id="7_dy622"]
 [ext_resource type="PackedScene" uid="uid://cjyknopvyc1y5" path="res://scene/cats/flag_cat.tscn" id="8_dh6ir"]
 [ext_resource type="PackedScene" uid="uid://coesx4v2jf83w" path="res://scene/cats/the_masked_cat.tscn" id="9_yp6oy"]
+[ext_resource type="Script" path="res://scene/cats/the_masked_cat.gd" id="10_y416i"]
 
 [node name="City" instance=ExtResource("1_ui0pk")]
 script = ExtResource("2_503lm")
@@ -18,11 +19,11 @@ position = Vector2(1422, 606)
 texture = ExtResource("3_6umnd")
 
 [node name="House2" type="Sprite2D" parent="Objects" index="1"]
-position = Vector2(1422, 606)
+position = Vector2(1842, 606)
 texture = ExtResource("3_6umnd")
 
-[node name="House2" type="Sprite2D" parent="Objects/House2" index="0"]
-position = Vector2(501, 0)
+[node name="House3" type="Sprite2D" parent="Objects" index="2"]
+position = Vector2(1923, 606)
 texture = ExtResource("3_6umnd")
 
 [node name="Cat Dog" parent="Cats" index="0" instance=ExtResource("4_medf7")]
@@ -38,6 +39,7 @@ collision_mask = 17
 [node name="Flag Cat" parent="Cats" index="4" instance=ExtResource("8_dh6ir")]
 
 [node name="The Masked Cat" parent="Cats" index="5" instance=ExtResource("9_yp6oy")]
+script = ExtResource("10_y416i")
 
 [node name="Start" parent="." index="6"]
 position = Vector2(1750, 1160)

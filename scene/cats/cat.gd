@@ -8,6 +8,7 @@ func check() -> void:
 
 func _ready() -> void:
 	ready()
+	disable_hide()
 
 func disable_hide():
 	unhide = true
@@ -28,3 +29,7 @@ func _on_camera_area_body_entered(_body: Node2D) -> void:
 
 func _on_camera_area_body_exited(_body: Node2D) -> void:
 	Global.temp_cat = "default"
+
+#func _unhandled_input(_event: InputEvent) -> void:
+#	if Input.is_action_just_pressed("action"):
+#		disable_hide()

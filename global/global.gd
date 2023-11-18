@@ -1,6 +1,6 @@
 extends Node
 
-var temp_cat = "Default"
+var temp_cat = "default"
 
 var config: ConfigFile
 var path_to_save_file : String = "user://game.cfg"

@@ -137,7 +137,7 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
-[node name="Telephone expanded" type="Control"]
+[node name="Telephone expanded" type="Control" groups=["telephone_expand"]]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

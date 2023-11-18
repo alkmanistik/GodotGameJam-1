@@ -1,5 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d17bbw6hmvqlj"]
+[gd_scene load_steps=3 format=3 uid="uid://d17bbw6hmvqlj"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_m3ruw"]
+[ext_resource type="Script" path="res://scene/cats/cat_dog.gd" id="2_wa3di"]
 
 [node name="Cat Dog" instance=ExtResource("1_m3ruw")]
+script = ExtResource("2_wa3di")

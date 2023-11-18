@@ -1,5 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw88cuivfuy4d"]
+[gd_scene load_steps=11 format=3 uid="uid://bw88cuivfuy4d"]
 
 [ext_resource type="PackedScene" uid="uid://ek3es5ndcrrn" path="res://scene/location/location.tscn" id="1_2orj5"]
+[ext_resource type="PackedScene" uid="uid://df04d01vr4wtp" path="res://scene/cats/shroedinger's_cat.tscn" id="2_yweo7"]
+[ext_resource type="PackedScene" uid="uid://cqsvo7a8gi6a5" path="res://scene/cats/nyan_cat.tscn" id="3_4a6tb"]
+[ext_resource type="Script" path="res://scene/cats/shroedinger's_cat.gd" id="3_jwd6i"]
+[ext_resource type="PackedScene" uid="uid://cpe63l6oiel5u" path="res://scene/cats/gigachad.tscn" id="4_6k7nk"]
+[ext_resource type="PackedScene" uid="uid://cdupvv2hsccp8" path="res://scene/cats/amogus.tscn" id="5_tfv7l"]
+[ext_resource type="PackedScene" uid="uid://dyc7l3j3usi0f" path="res://scene/cats/programmer.tscn" id="6_lga3c"]
+[ext_resource type="PackedScene" uid="uid://b7df1m0npy7wx" path="res://scene/cats/scientist.tscn" id="7_1ks2n"]
+[ext_resource type="Script" path="res://scene/cats/amogus.gd" id="7_vehfs"]
+[ext_resource type="Script" path="res://scene/cats/programmer.gd" id="9_b788c"]
 
 [node name="Laboratory" instance=ExtResource("1_2orj5")]
+
+[node name="Shroedinger\'s Cat" parent="Cats" index="0" instance=ExtResource("2_yweo7")]
+script = ExtResource("3_jwd6i")
+
+[node name="Nyan Cat" parent="Cats" index="1" instance=ExtResource("3_4a6tb")]
+
+[node name="Gigachad" parent="Cats" index="2" instance=ExtResource("4_6k7nk")]
+
+[node name="Amogus" parent="Cats" index="3" instance=ExtResource("5_tfv7l")]
+script = ExtResource("7_vehfs")
+
+[node name="Programmer" parent="Cats" index="4" instance=ExtResource("6_lga3c")]
+script = ExtResource("9_b788c")
+
+[node name="Scientist" parent="Cats" index="5" instance=ExtResource("7_1ks2n")]

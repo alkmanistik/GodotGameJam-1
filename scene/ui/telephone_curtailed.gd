@@ -7,6 +7,7 @@ var number_tel: String = ""
 var simple_text: String = "Empty Number"
 var overflow_text: String = "Overflow"
 var show_big_phone: bool = false
+var reporter_number: String = "12412"
 
 signal show_phone(tag: String)
 
@@ -43,7 +44,7 @@ func to_hide_pos() -> void:
 	tween.tween_property(self, "position", hide_pos, 0.5)
 	show_big_phone = true
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	if !show_big_phone and Input.is_action_just_pressed("esc"):
 		if position == usual_pos:
 			to_another_pos()
@@ -128,6 +129,8 @@ func call_number():
 			Global.unlock_locator = true
 			unlock_locator()
 			Global.save_game()
+		reporter_number:
+			disable_hide.emit()
 		_:
 			%Number.text = "Wrong number"
 	number_tel = ""
