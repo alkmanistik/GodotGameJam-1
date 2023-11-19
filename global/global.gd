@@ -30,12 +30,15 @@ var inventory_dict_null: Dictionary = {"Bone": 0, "Pumpkin": 0, "Valerian": 0, "
 var cat_dict: Dictionary = cat_dict_null
 var inventory_dict: Dictionary = inventory_dict_null
 
+
 func _ready() -> void:
+	DirAccess.make_dir_absolute(path_to_save_picture)
 	load_game()
 
 func save_global_settings() -> void:
 	config.set_value(section_name_to_global_settings, "volume", volume)
 	config.set_value(section_name_to_global_settings, "language", language)
+	config.save(path_to_save_file)
 
 func save_game() -> void:
 	config.set_value(section_name, "find_cat", find_cat)
@@ -82,3 +85,30 @@ func add_cat_label():
 	elif location == "Park":
 		find_cat_park += 1
 	save_game()
+
+func new_game():
+	cat_dict = cat_dict_null.duplicate(1)
+	inventory_dict = inventory_dict_null.duplicate(1)
+	find_cat = 0
+	find_cat_city = 0
+	find_cat_laboratory = 0
+	find_cat_park= 0
+	unlock_locator= false
+	location = ""
+	position = Vector2(0,0)
+	save_game()
+	var temp = load("res://scene/location/city.tscn")
+	await get_tree().create_timer(1).timeout
+	get_tree().change_scene_to_packed(temp)
+
+func end_game():
+	get_tree().change_scene_to_file("res://scene/ui/menu.tscn")
+
+func evil_mus():
+	GlobalAudioStreamPlayer.set_sound("res://resource/music/logovo.mp3")
+
+func change_start():
+	get_tree().root.get_node("/root/Start").change()
+
+func change_end():
+	get_tree().root.get_node("/root/End").change()

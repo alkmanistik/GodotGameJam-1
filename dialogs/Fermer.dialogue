@@ -14,6 +14,6 @@ if inventory_dict["Pumpkin"] == 1:
 
 ~ start_unhide
 
-Scientist: [Thanks for the help | Now my scarecrow is scary]
-
+% Fermer: Thanks for the help 
+% Fermer: Now my scarecrow is scary
 => END

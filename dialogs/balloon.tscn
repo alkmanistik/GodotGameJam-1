@@ -82,13 +82,12 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Dialogue..."
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/MarginContainer/VBoxContainer" node_paths=PackedStringArray("response_template")]
+[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 script = ExtResource("3_72ixx")
-response_template = NodePath("../../../../../../../../../../../../../../../../@PanelContainer@7498/@VBoxContainer@7499/@ThemeEditor@15891/@HSplitContainer@15654/@ThemeTypeEditor@15890/@VBoxContainer@15029/@TabContainer@15044/@VBoxContainer@15075/@ScrollContainer@15076/@VBoxContainer@15077/@HBoxContainer@117313/@EditorResourcePicker@117312/@Button@117308")
 
 [node name="ResponseExample" type="Button" parent="Balloon/MarginContainer/VBoxContainer/ResponsesMenu"]
 layout_mode = 2

@@ -1,0 +1,40 @@
+~ start
+
+do evil_mus():
+Evil: I've been waiting for your return
+Evil: I know you want to stop me, but it won't work
+Evil: There is not one reason for me to stop now
+You: Wait, why did you decide to destroy our world
+Evil: Fool
+Evil: There is nothing left in this world to warm the soul
+Evil: There is not a single joy in this world
+You: You're wrong!
+You: You took the colors from this world to prove otherwise, but some colors remained
+Evil: Impossible!
+You: Look!
+You: *You show him pictures of cats*
+Evil: Oh noooooooo
+do change_end()
+Evil: But how could colors be preserved in this world
+You: Maybe it's these seals
+You: Maybe our love for them has preserved them, maybe they are the source of our joys
+You: I know that you wanted to destroy the world because of its imperfection
+You: But maybe that's the beauty of it
+Evil: Sometimes it seems to me that the world is going to hell
+Evil: And then something good happens
+Evil: It's like an endless loop
+Evil: Do you understand?
+You: Yes, and you wanted to break it
+You: But don't you think that if it were only good, we wouldn't appreciate anything
+You: Yes, terrible things are happening in the world
+You: But you can fight and get better, right?
+Evil: I.. I made...
+Evil: I made a mistake
+Evil: But what should I do now?
+You: Maybe it's not too late to change everything?
+Evil: I fixed that first sphere, I should have enough to restore everything
+Evil: Will you give me a chance
+You: Let's do it together!!!
+do end_game()
+
+=> END

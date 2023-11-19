@@ -1,66 +1,353 @@
-[gd_scene load_steps=12 format=3 uid="uid://c6mmjaneuepfo"]
+[gd_scene load_steps=21 format=3 uid="uid://c6mmjaneuepfo"]
 
 [ext_resource type="PackedScene" uid="uid://ek3es5ndcrrn" path="res://scene/location/location.tscn" id="1_ui0pk"]
 [ext_resource type="Script" path="res://scene/location/city.gd" id="2_503lm"]
 [ext_resource type="Texture2D" uid="uid://bkudwn1o6rwgw" path="res://resource/texture/house.png" id="3_6umnd"]
+[ext_resource type="Texture2D" uid="uid://c3flh3jwtqril" path="res://resource/texture/tsvetok.png" id="4_6cwqe"]
 [ext_resource type="Texture2D" uid="uid://conk5s8v1m6gc" path="res://resource/texture/flag.png" id="4_6rhkk"]
 [ext_resource type="PackedScene" uid="uid://d17bbw6hmvqlj" path="res://scene/cats/cat_dog.tscn" id="4_medf7"]
 [ext_resource type="PackedScene" uid="uid://b2qgfqjj78erq" path="res://scene/cats/cat_reporter.tscn" id="5_kcu1w"]
+[ext_resource type="Texture2D" uid="uid://dum1f5iv1gw4a" path="res://resource/texture/podzemka.png" id="5_lttgs"]
 [ext_resource type="PackedScene" uid="uid://boyvhwjn3p0rj" path="res://scene/cats/long_cat.tscn" id="6_5mjmp"]
+[ext_resource type="Texture2D" uid="uid://2p6juyqhapsr" path="res://resource/texture/house_2.png" id="6_h2uxc"]
 [ext_resource type="PackedScene" uid="uid://bxiv2ny1dr05m" path="res://scene/cats/ninja.tscn" id="7_dy622"]
+[ext_resource type="Theme" uid="uid://cm00cp0vxjkhr" path="res://resource/theme.tres" id="7_mgt0x"]
 [ext_resource type="PackedScene" uid="uid://cjyknopvyc1y5" path="res://scene/cats/flag_cat.tscn" id="8_dh6ir"]
+[ext_resource type="Texture2D" uid="uid://bn55b1y6hb1yg" path="res://resource/texture/musorka.png" id="8_qmqxu"]
+[ext_resource type="Texture2D" uid="uid://ci5ixbaxktgcs" path="res://resource/texture/skameka_2.png" id="9_wkgl1"]
 [ext_resource type="PackedScene" uid="uid://coesx4v2jf83w" path="res://scene/cats/the_masked_cat.tscn" id="9_yp6oy"]
+[ext_resource type="Texture2D" uid="uid://dfm56jj5twbbc" path="res://resource/texture/fonar2-1.png" id="10_1fc82"]
 [ext_resource type="Texture2D" uid="uid://duksgsx0ssfmv" path="res://resource/texture/CartBoxCatDog.png" id="11_hyk7g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arg6a"]
+size = Vector2(1006, 2644)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3ap8"]
+size = Vector2(2939.5, 585)
 
 [node name="City" instance=ExtResource("1_ui0pk")]
 script = ExtResource("2_503lm")
+
+[node name="BackGround" parent="." index="0"]
+offset_left = -2680.0
+offset_top = -1333.0
+offset_right = 16684.0
+offset_bottom = 10640.0
 
 [node name="House" type="Sprite2D" parent="Objects" index="0"]
 position = Vector2(1422, 606)
 texture = ExtResource("3_6umnd")
 
-[node name="House2" type="Sprite2D" parent="Objects" index="1"]
-position = Vector2(1842, 606)
+[node name="House3" type="Sprite2D" parent="Objects" index="1"]
+position = Vector2(1806, 606)
 texture = ExtResource("3_6umnd")
 
-[node name="House3" type="Sprite2D" parent="Objects" index="2"]
-position = Vector2(1923, 606)
+[node name="House4" type="Sprite2D" parent="Objects" index="2"]
+position = Vector2(2189, 606)
 texture = ExtResource("3_6umnd")
 
-[node name="Flag" type="Sprite2D" parent="Objects" index="3"]
-position = Vector2(1500, 1477)
+[node name="House8" type="Sprite2D" parent="Objects" index="3"]
+position = Vector2(6504, 558)
+texture = ExtResource("3_6umnd")
+
+[node name="House9" type="Sprite2D" parent="Objects" index="4"]
+position = Vector2(6888, 558)
+texture = ExtResource("3_6umnd")
+
+[node name="House10" type="Sprite2D" parent="Objects" index="5"]
+position = Vector2(7271, 558)
+texture = ExtResource("3_6umnd")
+
+[node name="Tsvetok5" type="Sprite2D" parent="Objects" index="6"]
+position = Vector2(2817, 807)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_6cwqe")
+
+[node name="Podzemka" type="Sprite2D" parent="Objects" index="7"]
+position = Vector2(2609, 848)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_lttgs")
+
+[node name="Podzemka2" type="Sprite2D" parent="Objects" index="8"]
+position = Vector2(2589, 2058)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_lttgs")
+
+[node name="Line2D" type="Line2D" parent="Objects" index="9"]
+position = Vector2(937, 1291)
+points = PackedVector2Array(0, 0, 6000, 0)
+default_color = Color(0, 0, 0, 1)
+
+[node name="House2" type="Sprite2D" parent="Objects" index="10"]
+position = Vector2(3412, 584)
+texture = ExtResource("3_6umnd")
+
+[node name="House5" type="Sprite2D" parent="Objects" index="11"]
+position = Vector2(4429, 597)
+texture = ExtResource("3_6umnd")
+
+[node name="House6" type="Sprite2D" parent="Objects" index="12"]
+position = Vector2(4810, 593)
+texture = ExtResource("3_6umnd")
+
+[node name="House7" type="Sprite2D" parent="Objects" index="13"]
+z_index = 1
+position = Vector2(5186, 391)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_h2uxc")
+
+[node name="Label" type="Label" parent="Objects/House7" index="0"]
+offset_left = -3710.0
+offset_top = 570.0
+offset_right = -2910.0
+offset_bottom = 774.0
+rotation = 0.457635
+theme = ExtResource("7_mgt0x")
+theme_override_colors/font_color = Color(0.807843, 0.239216, 0.54902, 1)
+theme_override_font_sizes/font_size = 50
+text = "Reporter Number
+          12412"
+
+[node name="Line2D2" type="Line2D" parent="Objects" index="14"]
+position = Vector2(945, 1923)
+points = PackedVector2Array(0, 0, 6000, 0)
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D3" type="Line2D" parent="Objects" index="15"]
+position = Vector2(958, 1590)
+points = PackedVector2Array(0, 0, 200, 0)
+width = 24.0
+default_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="Line2D4" type="Line2D" parent="Objects" index="16"]
+position = Vector2(1349, 1585)
+points = PackedVector2Array(0, 0, 200, 0)
+width = 24.0
+default_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="Line2D5" type="Line2D" parent="Objects" index="17"]
+position = Vector2(1810, 1591)
+points = PackedVector2Array(0, 0, 200, 0)
+width = 24.0
+default_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="Line2D6" type="Line2D" parent="Objects" index="18"]
+position = Vector2(2379, 1594)
+points = PackedVector2Array(0, 0, 200, 0)
+width = 24.0
+default_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="Line2D7" type="Line2D" parent="Objects" index="19"]
+position = Vector2(2969, 1589)
+points = PackedVector2Array(0, 0, 200, 0)
+width = 24.0
+default_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="Line2D8" type="Line2D" parent="Objects" index="20"]
+position = Vector2(3539, 1584)
+points = PackedVector2Array(0, 0, 200, 0)
+width = 24.0
+default_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="Line2D9" type="Line2D" parent="Objects" index="21"]
+position = Vector2(4149, 1584)
+points = PackedVector2Array(0, 0, 200, 0)
+width = 24.0
+default_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="Line2D10" type="Line2D" parent="Objects" index="22"]
+position = Vector2(4872, 1574)
+points = PackedVector2Array(0, 0, 200, 0)
+width = 24.0
+default_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="Line2D11" type="Line2D" parent="Objects" index="23"]
+position = Vector2(5438, 1574)
+points = PackedVector2Array(0, 0, 200, 0)
+width = 24.0
+default_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="Line2D12" type="Line2D" parent="Objects" index="24"]
+position = Vector2(5967, 1577)
+points = PackedVector2Array(0, 0, 200, 0)
+width = 24.0
+default_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="Line2D13" type="Line2D" parent="Objects" index="25"]
+position = Vector2(6421, 1580)
+points = PackedVector2Array(0, 0, 200, 0)
+width = 24.0
+default_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="Flag" type="Sprite2D" parent="Objects" index="26"]
+position = Vector2(1672, 1854)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_6rhkk")
 
-[node name="Flag2" type="Sprite2D" parent="Objects" index="4"]
-position = Vector2(2017, 1495)
+[node name="Flag3" type="Sprite2D" parent="Objects" index="27"]
+position = Vector2(1190, 1851)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_6rhkk")
+
+[node name="Flag2" type="Sprite2D" parent="Objects" index="28"]
+position = Vector2(2125, 1845)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_6rhkk")
+
+[node name="Musorka" type="Sprite2D" parent="Objects" index="29"]
+position = Vector2(3919, 874)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_qmqxu")
+
+[node name="Musorka2" type="Sprite2D" parent="Objects" index="30"]
+position = Vector2(5631, 904)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_qmqxu")
+
+[node name="Musorka3" type="Sprite2D" parent="Objects" index="31"]
+position = Vector2(2587, 2236)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_qmqxu")
+
+[node name="Musorka4" type="Sprite2D" parent="Objects" index="32"]
+position = Vector2(2620, 1009)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_qmqxu")
+
+[node name="Musorka5" type="Sprite2D" parent="Objects" index="33"]
+position = Vector2(4057, 1960)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_qmqxu")
+
+[node name="Musorka6" type="Sprite2D" parent="Objects" index="34"]
+position = Vector2(4985, 1941)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_qmqxu")
+
+[node name="Skameka2" type="Sprite2D" parent="Objects" index="35"]
+position = Vector2(4272, 1937)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_wkgl1")
+
+[node name="Skameka3" type="Sprite2D" parent="Objects" index="36"]
+position = Vector2(5209, 1927)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_wkgl1")
+
+[node name="Skameka4" type="Sprite2D" parent="Objects" index="37"]
+position = Vector2(4337, 1059)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_wkgl1")
+
+[node name="Tsvetok" type="Sprite2D" parent="Objects" index="38"]
+position = Vector2(3367, 1958)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_6cwqe")
+
+[node name="Tsvetok2" type="Sprite2D" parent="Objects" index="39"]
+position = Vector2(2979, 1961)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_6cwqe")
+
+[node name="Tsvetok3" type="Sprite2D" parent="Objects" index="40"]
+position = Vector2(4506, 1862)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_6cwqe")
+
+[node name="Tsvetok6" type="Sprite2D" parent="Objects" index="41"]
+position = Vector2(6377, 2026)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_6cwqe")
+
+[node name="Tsvetok7" type="Sprite2D" parent="Objects" index="42"]
+position = Vector2(6765, 2037)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_6cwqe")
+
+[node name="Tsvetok4" type="Sprite2D" parent="Objects" index="43"]
+position = Vector2(5444, 1871)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_6cwqe")
+
+[node name="Fonar2-1" type="Sprite2D" parent="Objects" index="44"]
+position = Vector2(4201, 1572)
+texture = ExtResource("10_1fc82")
+
+[node name="Fonar2-2" type="Sprite2D" parent="Objects" index="45"]
+position = Vector2(2641, 635)
+texture = ExtResource("10_1fc82")
+
+[node name="Fonar2-5" type="Sprite2D" parent="Objects" index="46"]
+position = Vector2(6682, 1564)
+texture = ExtResource("10_1fc82")
+
+[node name="Fonar2-3" type="Sprite2D" parent="Objects" index="47"]
+position = Vector2(6222, 474)
+texture = ExtResource("10_1fc82")
+
+[node name="Fonar2-4" type="Sprite2D" parent="Objects" index="48"]
+position = Vector2(2637, 1966)
+texture = ExtResource("10_1fc82")
 
 [node name="Cat Reporter" parent="Cats" index="0" groups=["Cat"] instance=ExtResource("5_kcu1w")]
-position = Vector2(1349, 1011)
+position = Vector2(5217, 1847)
 
 [node name="Long Cat" parent="Cats" index="1" groups=["Cat"] instance=ExtResource("6_5mjmp")]
-position = Vector2(865, 875)
+position = Vector2(2136, 905)
 
 [node name="Ninja" parent="Cats" index="2" groups=["Cat"] instance=ExtResource("7_dy622")]
-position = Vector2(2883, 1801)
+position = Vector2(4798, 79)
 
 [node name="Flag Cat" parent="Cats" index="3" groups=["Cat"] instance=ExtResource("8_dh6ir")]
-position = Vector2(1975, 1417)
+position = Vector2(1609, 1724)
 
 [node name="The Masked Cat" parent="Cats" index="4" groups=["Cat"] instance=ExtResource("9_yp6oy")]
-position = Vector2(2684, 1079)
+position = Vector2(3198, 2052)
 
 [node name="Cat Dog" parent="Cats" index="5" groups=["Cat"] instance=ExtResource("4_medf7")]
-position = Vector2(2160, 1012)
+position = Vector2(3618, 987)
 
 [node name="Cat_Object" type="Node2D" parent="." index="4"]
 
 [node name="CartBoxCatDog" type="Sprite2D" parent="Cat_Object" index="0"]
-position = Vector2(2330, 1017)
+position = Vector2(3783, 984)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("11_hyk7g")
 
-[node name="Start" parent="." index="7"]
-position = Vector2(1750, 1160)
+[node name="Start" parent="." index="6"]
+position = Vector2(2846, 1096)
+
+[node name="Left_Up_Stopper" parent="." index="7"]
+position = Vector2(-1025, -1709)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border" index="0"]
+position = Vector2(985, 1301)
+shape = SubResource("RectangleShape2D_arg6a")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Border" index="1"]
+position = Vector2(6455, 1344)
+shape = SubResource("RectangleShape2D_arg6a")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Border" index="2"]
+position = Vector2(6455, 388)
+shape = SubResource("RectangleShape2D_arg6a")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border" index="3"]
+position = Vector2(2954.5, 76.5)
+shape = SubResource("RectangleShape2D_f3ap8")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Border" index="4"]
+position = Vector2(4547, -639)
+shape = SubResource("RectangleShape2D_f3ap8")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Border" index="5"]
+position = Vector2(2954, -85)
+shape = SubResource("RectangleShape2D_f3ap8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Border" index="6"]
+position = Vector2(2786.25, 2788)
+shape = SubResource("RectangleShape2D_f3ap8")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Border" index="7"]
+position = Vector2(5690, 2787)
+shape = SubResource("RectangleShape2D_f3ap8")

@@ -15,6 +15,7 @@ if inventory_dict["Valerian"] == 1:
 
 ~ start_unhide
 
-Scientist: [Thanks for the help|We have received samples]
+% Scientist: Thanks for the help
+% Scientist:We have received samples
 
 => END

@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=7 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_4u26j"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Theme" uid="uid://cm00cp0vxjkhr" path="res://resource/theme.tres" id="2_i7wmg"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 [ext_resource type="FontFile" uid="uid://cksj8xedfpn66" path="res://resource/fonts/MouldyCheeseRegular-WyMWG.ttf" id="3_ugia2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxaog"]
+bg_color = Color(0.109804, 0.109804, 0.109804, 1)
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
@@ -31,6 +34,7 @@ offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_i7wmg")
+theme_override_styles/panel = SubResource("StyleBoxFlat_jxaog")
 
 [node name="Dialogue" type="MarginContainer" parent="Balloon"]
 layout_mode = 1

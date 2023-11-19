@@ -1,0 +1,34 @@
+~ start
+
+do evil_mus()
+Evil: Ha ha ha...
+Evil: In a few seconds I will destroy the world
+Evil: I have already taken all the colors from this world
+Evil: There is nothing beautiful left in this world
+Evil: I will sacrifice you to start a retual
+You: Well, this is the end, so fast (The game has just begun)
+You: Oh no, if this world is destroyed, then so is my pet, oh no
+You: *You take out a photo of your pet*
+You: *You can see that the colors from your pet's picture have not disappeared*
+You: *You decided to show it to an evil sorcerer*
+Evil: And that it just can't be!
+Evil: *He is blinded and accidentally breaks one of his spheres*
+Evil: What have you done?
+Evil: You'll have to wait until I fix this sphere.
+You: *You see that the villain is fixing the sphere and does not pay attention to you*
+do change_start()
+You: *You decide to run away, but you understand one thing*
+You: He will destroy the world anyway!!!
+You: *You can see that the other cats have kept their color*
+You: Or maybe it's a sign
+You: I have to save the world
+You: I'll show him these cute creatures and he'll change his mind about destroying the world!
+Game: Be careful with colored objects
+Game: Since the villain has done something in the world, cats can talk
+Game: Just click on them
+Game: Go ahead and take a picture of these cats on your phone
+Game: But some will not let themselves be photographed so easily
+Game: Good luck!
+do new_game()
+
+=> END

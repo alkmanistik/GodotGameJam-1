@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GodotGameJam-1"
-run/main_scene="res://scene/location/park.tscn"
+run/main_scene="res://scene/ui/menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Global="*res://global/global.gd"
+GlobalAudioStreamPlayer="*res://global/audio_stream_player.tscn"
 
 [dialogue_manager]
 
@@ -29,7 +30,7 @@ general/states=["Global"]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/always_on_top=true
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor]
@@ -89,7 +90,7 @@ right={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogs/Cat Dog.dialogue", "res://dialogs/Cat Reporter.dialogue", "res://dialogs/Ninja.dialogue", "res://dialogs/Long Cat.dialogue", "res://dialogs/Flag Cat.dialogue", "res://dialogs/The Masked Cat.dialogue", "res://dialogs/Shroedinger\'s Cat.dialogue", "res://dialogs/Nyan Cat.dialogue", "res://dialogs/Gigachad.dialogue", "res://dialogs/Programmer.dialogue", "res://dialogs/Scientist.dialogue", "res://dialogs/Fluffy.dialogue", "res://dialogs/Jumping Cat.dialogue", "res://dialogs/Archaeologist.dialogue", "res://dialogs/Lake Cat.dialogue", "res://dialogs/Amogus.dialogue", "res://dialogs/Fermer.dialogue", "res://dialogs/Strange.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogs/Cat Dog.dialogue", "res://dialogs/Cat Reporter.dialogue", "res://dialogs/Ninja.dialogue", "res://dialogs/Long Cat.dialogue", "res://dialogs/Flag Cat.dialogue", "res://dialogs/The Masked Cat.dialogue", "res://dialogs/Shroedinger\'s Cat.dialogue", "res://dialogs/Nyan Cat.dialogue", "res://dialogs/Gigachad.dialogue", "res://dialogs/Programmer.dialogue", "res://dialogs/Scientist.dialogue", "res://dialogs/Fluffy.dialogue", "res://dialogs/Jumping Cat.dialogue", "res://dialogs/Archaeologist.dialogue", "res://dialogs/Lake Cat.dialogue", "res://dialogs/Amogus.dialogue", "res://dialogs/Fermer.dialogue", "res://dialogs/Strange.dialogue", "res://dialogs/start.dialogue", "res://dialogs/end.dialogue")
 
 [layer_names]
 

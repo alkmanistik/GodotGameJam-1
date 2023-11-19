@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3 uid="uid://u63175tu7ygh"]
+
+[ext_resource type="Script" path="res://scene/location/end.gd" id="1_r8bqv"]
+[ext_resource type="Texture2D" uid="uid://byql4aedl611j" path="res://resource/texture/sfera_2.png" id="2_fgvtf"]
+[ext_resource type="Texture2D" uid="uid://dgeaoy0e3gqkk" path="res://resource/texture/zlodey.png" id="3_aq8ux"]
+[ext_resource type="Texture2D" uid="uid://bwtra7r8vnxmo" path="res://resource/texture/Sfere/1.png" id="4_b8y20"]
+[ext_resource type="Texture2D" uid="uid://8adtaqedljss" path="res://resource/texture/Sfere/2.png" id="5_qaoqy"]
+[ext_resource type="Texture2D" uid="uid://dwthgq2ii076o" path="res://resource/texture/Sfere/3.png" id="6_chujv"]
+[ext_resource type="Texture2D" uid="uid://drhf6l5f63edx" path="res://resource/texture/Sfere/4.png" id="7_fltob"]
+[ext_resource type="Texture2D" uid="uid://o7wdu0kwdi55" path="res://resource/texture/Sfere/5.png" id="8_if3da"]
+[ext_resource type="Texture2D" uid="uid://20dt67nid0l" path="res://resource/texture/Sfere/6.png" id="9_snucw"]
+[ext_resource type="Texture2D" uid="uid://closr4hap5nc0" path="res://resource/texture/Sfere/7.png" id="10_edc34"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_d7nmv"]
+
+[node name="End" type="CanvasLayer" groups=["story"]]
+script = ExtResource("1_r8bqv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.513726, 0.513726, 0.513726, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_d7nmv")
+
+[node name="First" type="Node2D" parent="."]
+
+[node name="Sfera2" type="Sprite2D" parent="First"]
+position = Vector2(537, 521)
+rotation = -0.347643
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_fgvtf")
+
+[node name="Sfera3" type="Sprite2D" parent="First"]
+position = Vector2(905, 164)
+rotation = -0.347643
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_fgvtf")
+
+[node name="Sfera4" type="Sprite2D" parent="First"]
+position = Vector2(1358, 427)
+rotation = -0.347643
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_fgvtf")
+
+[node name="Zlodey" type="Sprite2D" parent="First"]
+position = Vector2(942, 572)
+texture = ExtResource("3_aq8ux")
+
+[node name="Second" type="Node2D" parent="."]
+visible = false
+
+[node name="sphere" type="Node2D" parent="Second"]
+scale = Vector2(0.2, 0.2)
+
+[node name="1" type="Sprite2D" parent="Second/sphere"]
+position = Vector2(2525, 3935)
+texture = ExtResource("4_b8y20")
+
+[node name="2" type="Sprite2D" parent="Second/sphere"]
+position = Vector2(3460, 4045)
+rotation = 1.96253
+texture = ExtResource("5_qaoqy")
+
+[node name="3" type="Sprite2D" parent="Second/sphere"]
+position = Vector2(7460, 4370)
+rotation = 2.54645
+texture = ExtResource("6_chujv")
+
+[node name="4" type="Sprite2D" parent="Second/sphere"]
+position = Vector2(6420, 4335)
+texture = ExtResource("7_fltob")
+
+[node name="5" type="Sprite2D" parent="Second/sphere"]
+position = Vector2(5490, 4600)
+texture = ExtResource("8_if3da")
+
+[node name="6" type="Sprite2D" parent="Second/sphere"]
+position = Vector2(5335, 4015)
+texture = ExtResource("9_snucw")
+
+[node name="7" type="Sprite2D" parent="Second/sphere"]
+position = Vector2(4060, 4625)
+texture = ExtResource("10_edc34")
+
+[node name="Zlodey" type="Sprite2D" parent="Second"]
+position = Vector2(942, 572)
+texture = ExtResource("3_aq8ux")

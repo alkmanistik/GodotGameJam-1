@@ -9,6 +9,9 @@ signal flash()
 signal change_level(name:String)
 signal show_mini_phone()
 
+func _ready():
+	%HSlider.value = Global.volume
+
 func open():
 	var tween = create_tween() as Tween
 	tween.tween_property(self, "position", usual_pos, 0.5)
@@ -64,3 +67,21 @@ func _on_laboratory_pressed() -> void:
 
 func _on_park_pressed() -> void:
 	change_level.emit("res://scene/location/park.tscn")
+
+
+func _on_h_slider_value_changed(value):
+	Global.volume = value
+	Global.save_global_settings()
+
+
+func _on_exit_pressed():
+	get_tree().quit()
+
+
+func _on_exit_to_menu_pressed():
+	get_tree().change_scene_to_file("res://scene/ui/menu.tscn")
+
+
+func _on_end_pressed():
+	if Global.find_cat >= 12:
+		get_tree().change_scene_to_file("res://scene/location/end.tscn")

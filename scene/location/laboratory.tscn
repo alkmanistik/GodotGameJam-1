@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bw88cuivfuy4d"]
+[gd_scene load_steps=18 format=3 uid="uid://bw88cuivfuy4d"]
 
 [ext_resource type="PackedScene" uid="uid://ek3es5ndcrrn" path="res://scene/location/location.tscn" id="1_2orj5"]
 [ext_resource type="PackedScene" uid="uid://dbdqtuglknpq4" path="res://scene/object/emergency.tscn" id="2_c3g6k"]
@@ -6,43 +6,143 @@
 [ext_resource type="PackedScene" uid="uid://df04d01vr4wtp" path="res://scene/cats/shroedinger's_cat.tscn" id="2_yweo7"]
 [ext_resource type="PackedScene" uid="uid://cqsvo7a8gi6a5" path="res://scene/cats/nyan_cat.tscn" id="3_4a6tb"]
 [ext_resource type="PackedScene" uid="uid://cpe63l6oiel5u" path="res://scene/cats/gigachad.tscn" id="4_6k7nk"]
+[ext_resource type="Texture2D" uid="uid://cfl51uxhkhydb" path="res://resource/texture/Space_back.jpg" id="4_vj57o"]
+[ext_resource type="Texture2D" uid="uid://dv8t2a064ygg" path="res://resource/texture/bunker.png" id="5_jodt6"]
+[ext_resource type="Texture2D" uid="uid://omt8eercyvu8" path="res://resource/texture/stol.png" id="5_qni6e"]
 [ext_resource type="PackedScene" uid="uid://cdupvv2hsccp8" path="res://scene/cats/amogus.tscn" id="5_tfv7l"]
 [ext_resource type="PackedScene" uid="uid://dyc7l3j3usi0f" path="res://scene/cats/programmer.tscn" id="6_lga3c"]
+[ext_resource type="Texture2D" uid="uid://c3flh3jwtqril" path="res://resource/texture/tsvetok.png" id="6_sxqi5"]
 [ext_resource type="PackedScene" uid="uid://b7df1m0npy7wx" path="res://scene/cats/scientist.tscn" id="7_1ks2n"]
+[ext_resource type="Texture2D" uid="uid://bl8qambuf7hjc" path="res://resource/texture/Probirka.png" id="14_opn11"]
+[ext_resource type="Texture2D" uid="uid://ddv4tgblomtjx" path="res://resource/texture/Probirka2.png" id="15_5lb3g"]
+[ext_resource type="Texture2D" uid="uid://b0euye7ujxob2" path="res://resource/texture/pngegg.png" id="17_2qfmr"]
+[ext_resource type="Texture2D" uid="uid://cc3ogjln4ip7u" path="res://resource/texture/kolonna.png" id="17_hv8ir"]
 
 [node name="Laboratory" instance=ExtResource("1_2orj5")]
 script = ExtResource("2_joss1")
 
-[node name="Emergency" parent="Objects" index="0" instance=ExtResource("2_c3g6k")]
-position = Vector2(1060, 127)
+[node name="Sprite2D" type="Sprite2D" parent="Objects" index="0"]
+position = Vector2(5413, 2555)
+scale = Vector2(2.9544, 2.9544)
+texture = ExtResource("4_vj57o")
+
+[node name="Bunker" type="Sprite2D" parent="Objects" index="1"]
+position = Vector2(5597, 3323)
+scale = Vector2(1.836, 1.836)
+texture = ExtResource("5_jodt6")
+
+[node name="Stol" type="Sprite2D" parent="Objects" index="2"]
+position = Vector2(4738, 5412)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_qni6e")
+
+[node name="Stol2" type="Sprite2D" parent="Objects" index="3"]
+position = Vector2(6706, 4545)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_qni6e")
+
+[node name="Stol3" type="Sprite2D" parent="Objects" index="4"]
+position = Vector2(7011, 4541)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_qni6e")
+
+[node name="Stol4" type="Sprite2D" parent="Objects" index="5"]
+position = Vector2(7312, 4537)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_qni6e")
+
+[node name="Tsvetok" type="Sprite2D" parent="Objects" index="6"]
+position = Vector2(4465, 5381)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_sxqi5")
+
+[node name="Tsvetok2" type="Sprite2D" parent="Objects" index="7"]
+position = Vector2(4960, 5379)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_sxqi5")
+
+[node name="Emergency" parent="Objects" index="8" instance=ExtResource("2_c3g6k")]
+position = Vector2(6993, 4576)
+scale = Vector2(2, 2)
+
+[node name="Pngegg" type="Sprite2D" parent="Objects" index="9"]
+position = Vector2(7342, 4531)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("17_2qfmr")
+
+[node name="Probirka2" type="Sprite2D" parent="Objects" index="10"]
+position = Vector2(6748, 4558)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("15_5lb3g")
+
+[node name="Probirka3" type="Sprite2D" parent="Objects" index="11"]
+position = Vector2(6793, 4559)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("15_5lb3g")
+
+[node name="Probirka4" type="Sprite2D" parent="Objects" index="12"]
+position = Vector2(6924, 4561)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("15_5lb3g")
+
+[node name="Probirka5" type="Sprite2D" parent="Objects" index="13"]
+position = Vector2(7087, 4559)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("15_5lb3g")
+
+[node name="Probirka6" type="Sprite2D" parent="Objects" index="14"]
+position = Vector2(7215, 4561)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("15_5lb3g")
+
+[node name="Probirka" type="Sprite2D" parent="Objects" index="15"]
+position = Vector2(6634, 4521)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("14_opn11")
 
 [node name="Shroedinger`s Cat" parent="Cats" index="0" groups=["Cat"] instance=ExtResource("2_yweo7")]
-position = Vector2(1567, 902)
+position = Vector2(7340, 4516)
+scale = Vector2(0.8, 0.8)
 collision_mask = 16
 
 [node name="Nyan Cat" parent="Cats" index="1" groups=["Cat"] instance=ExtResource("3_4a6tb")]
-position = Vector2(-313, 529)
+position = Vector2(2689, 3194)
 scale = Vector2(8, 8)
 collision_mask = 16
 
 [node name="Gigachad" parent="Cats" index="2" groups=["Cat"] instance=ExtResource("4_6k7nk")]
-position = Vector2(1023, 975)
+position = Vector2(4840, 4248)
+rotation = 0.120428
 collision_mask = 16
 
 [node name="Amogus" parent="Cats" index="3" groups=["Cat"] instance=ExtResource("5_tfv7l")]
-position = Vector2(1626, 136)
+position = Vector2(3757, 5219)
 collision_mask = 16
 
 [node name="Programmer" parent="Cats" index="4" groups=["Cat"] instance=ExtResource("6_lga3c")]
-position = Vector2(143, 936)
+position = Vector2(4722, 5416)
 collision_mask = 16
 
 [node name="Scientist" parent="Cats" index="5" groups=["Cat"] instance=ExtResource("7_1ks2n")]
-position = Vector2(242, 135)
+position = Vector2(6237, 4625)
 collision_mask = 16
+
+[node name="Kolonna" type="Sprite2D" parent="." index="3"]
+position = Vector2(6533, 4490)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("17_hv8ir")
 
 [node name="Player" parent="." index="5"]
 position = Vector2(961, 541)
 
+[node name="Start" parent="." index="6"]
+position = Vector2(5792, 5257)
+
 [node name="Left_Up_Stopper" parent="." index="7"]
 position = Vector2(-890, -506)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border" index="0"]
+polygon = PackedVector2Array(3948, 3662, 3631, 4243, 3419, 5369, 4544, 5814, 6832, 5625, 7625, 4712, 7534, 4070, 6855, 3451, 6394, 3277, 6915, 3216, 7580, 3775, 7874, 4795, 7308, 5799, 5624, 6199, 3578, 5935, 3042, 5316, 3344, 4206, 3653, 3526, 4016, 3352)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Border" index="1"]
+polygon = PackedVector2Array(3926, 3651, 4028, 3315, 4250, 2596, 5586, 2548, 6407, 2883, 6407, 3279, 6869, 3447, 6982, 2626, 6119, 2164, 4657, 2050, 3584, 2158, 3321, 3069, 3351, 3788)

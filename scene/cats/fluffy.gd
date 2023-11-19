@@ -8,6 +8,8 @@ func _ready() -> void:
 func fix():
 	$Fluffy.hide()
 	$Sprite_Cat.show()
+	Global.inventory_dict["Hairbrush"] = 0
+	Global.save_game()
 
 func click():
 	if unhide:

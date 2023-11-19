@@ -14,6 +14,6 @@ if inventory_dict["Pumpkin"] == 1:
 
 ~ start_unhide
 
-Fermer: [Thanks for the help|Now my beds are safe]
+Jumping Cat: Meow
 
 => END

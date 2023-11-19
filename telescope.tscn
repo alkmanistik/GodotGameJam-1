@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhtx6mj8n3ba7"]
+
+[ext_resource type="Script" path="res://telescope.gd" id="1_3jumc"]
+[ext_resource type="Texture2D" uid="uid://br2a2ul0ljkej" path="res://resource/texture/teleskop.png" id="2_otnw3"]
+[ext_resource type="Texture2D" uid="uid://dfyrus6r6jhu4" path="res://resource/texture/Sign.png" id="3_yvmau"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsym7"]
+size = Vector2(46, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1bcd"]
+size = Vector2(12, 11)
+
+[node name="Telescope" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_3jumc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1.5)
+shape = SubResource("RectangleShape2D_rsym7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(2, -28.5)
+shape = SubResource("RectangleShape2D_b1bcd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -1)
+scale = Vector2(0.0712928, 0.0712928)
+texture = ExtResource("2_otnw3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2, -28)
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("3_yvmau")
+
+[connection signal="input_event" from="." to="." method="_on_input_event" flags=18]

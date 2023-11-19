@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1sdd0bj7gvv4"]
+
+[ext_resource type="Script" path="res://scene/object/brush.gd" id="1_o8n25"]
+[ext_resource type="Texture2D" uid="uid://dghhgy5rgb6ub" path="res://resource/texture/hairbrush.png" id="2_nkwri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsym7"]
+size = Vector2(46, 18.3724)
+
+[node name="Brush" type="Area2D"]
+script = ExtResource("1_o8n25")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -1)
+scale = Vector2(0.0712928, 0.0712928)
+texture = ExtResource("2_nkwri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.48102, -0.482362)
+rotation = 2.39285
+shape = SubResource("RectangleShape2D_rsym7")
+
+[connection signal="input_event" from="." to="." method="_on_input_event" flags=18]

@@ -1,12 +1,16 @@
-[gd_scene load_steps=25 format=3 uid="uid://c8icsrskhxlnl"]
+[gd_scene load_steps=29 format=3 uid="uid://c8icsrskhxlnl"]
 
 [ext_resource type="Script" path="res://scene/ui/telephone_expanded.gd" id="1_de6sh"]
 [ext_resource type="Texture2D" uid="uid://dmvue7k1u5gb8" path="res://resource/texture/Tele.png" id="1_m3yjn"]
 [ext_resource type="Theme" uid="uid://cm00cp0vxjkhr" path="res://resource/theme.tres" id="1_qph71"]
 [ext_resource type="Texture2D" uid="uid://b8rwgd652c6eg" path="res://resource/texture/back.png" id="3_fhmkc"]
 [ext_resource type="Texture2D" uid="uid://bovd0sbhkvfkb" path="res://resource/texture/TAXI.png" id="3_jr8dk"]
+[ext_resource type="Texture2D" uid="uid://dfyrus6r6jhu4" path="res://resource/texture/Sign.png" id="3_v2x2o"]
 [ext_resource type="Texture2D" uid="uid://x377g3wk88f1" path="res://resource/texture/camera_aim.png" id="4_51x6v"]
+[ext_resource type="Texture2D" uid="uid://djukl7shcpn06" path="res://resource/texture/icon/city.jpg" id="4_rhji5"]
 [ext_resource type="Texture2D" uid="uid://c5p7bpni1s47l" path="res://resource/texture/camera_icon.png" id="5_0651x"]
+[ext_resource type="Texture2D" uid="uid://w7aq2cbi2ey2" path="res://resource/texture/icon/Laboratory.jpg" id="5_bcn0q"]
+[ext_resource type="Texture2D" uid="uid://dyi5ge3q4s3n1" path="res://resource/texture/icon/park.jpg" id="6_ndcp4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tot44"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -214,6 +218,7 @@ text = "Master Volume:"
 horizontal_alignment = 1
 
 [node name="HSlider" type="HSlider" parent="Setting/VBoxContainer/Control2"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 632.0
 offset_top = 19.0
@@ -231,7 +236,7 @@ custom_minimum_size = Vector2(0, 66)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Button" type="Button" parent="Setting/VBoxContainer/Control"]
+[node name="exit_to_menu" type="Button" parent="Setting/VBoxContainer/Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -252,7 +257,7 @@ custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Button" type="Button" parent="Setting/VBoxContainer/Control3"]
+[node name="exit" type="Button" parent="Setting/VBoxContainer/Control3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -338,7 +343,7 @@ theme_override_constants/separation = 25
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer/Control"]
+[node name="End" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer/Control"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 1
 anchors_preset = 8
@@ -356,7 +361,7 @@ theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_86p2u")
-icon = ExtResource("3_jr8dk")
+icon = ExtResource("3_v2x2o")
 icon_alignment = 1
 expand_icon = true
 
@@ -365,7 +370,9 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.580392, 0.580392, 0.580392, 1)
 theme_override_font_sizes/font_size = 37
-text = "The Villain's Lair"
+text = "The Villain's Lair
+(Collect more
+ than 12 cats)"
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -396,7 +403,7 @@ theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_se2dd")
-icon = ExtResource("3_jr8dk")
+icon = ExtResource("4_rhji5")
 icon_alignment = 1
 expand_icon = true
 
@@ -436,7 +443,7 @@ theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_h46v5")
-icon = ExtResource("3_jr8dk")
+icon = ExtResource("5_bcn0q")
 icon_alignment = 1
 expand_icon = true
 
@@ -476,7 +483,7 @@ theme_override_constants/icon_max_width = 130
 theme_override_styles/normal = SubResource("StyleBoxFlat_ejwyj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fnqi8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ac6mg")
-icon = ExtResource("3_jr8dk")
+icon = ExtResource("6_ndcp4")
 icon_alignment = 1
 expand_icon = true
 
@@ -1345,6 +1352,10 @@ texture = ExtResource("1_m3yjn")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 
+[connection signal="value_changed" from="Setting/VBoxContainer/Control2/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Setting/VBoxContainer/Control/exit_to_menu" to="." method="_on_exit_to_menu_pressed"]
+[connection signal="pressed" from="Setting/VBoxContainer/Control3/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Taxi/VBoxContainer/HBoxContainer/VBoxContainer/Control/End" to="." method="_on_end_pressed"]
 [connection signal="pressed" from="Taxi/VBoxContainer/HBoxContainer/VBoxContainer2/Control/City" to="." method="_on_city_pressed"]
 [connection signal="pressed" from="Taxi/VBoxContainer/HBoxContainer/VBoxContainer3/Control/Laboratory" to="." method="_on_laboratory_pressed"]
 [connection signal="pressed" from="Taxi/VBoxContainer/HBoxContainer/VBoxContainer4/Control/Park" to="." method="_on_park_pressed"]

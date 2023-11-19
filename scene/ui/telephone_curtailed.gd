@@ -1,6 +1,6 @@
 extends Control
 
-var usual_pos: Vector2 = Vector2(1608,1107)
+var usual_pos: Vector2 = Vector2(1608,1188)
 var another_pos: Vector2 = Vector2(1608,800)
 var hide_pos: Vector2 = Vector2(1608,2000)
 var number_tel: String = ""

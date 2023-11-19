@@ -9,6 +9,8 @@ func fix():
 	disable_hide()
 	$Scarecrow.hide()
 	$Scarecrow_pumpkin.show()
+	Global.inventory_dict["Pumpkin"] = 0
+	Global.save_game()
 
 func click():
 	if unhide:

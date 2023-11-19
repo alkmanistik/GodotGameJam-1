@@ -1,13 +1,14 @@
 ~ start_hide
 
-Red Amogus Cat: [I hope no one saw anything|If anything, I went with you the whole game|I'm doing tasks, not standing AFK]
-
+% Red Amogus Cat: I hope no one saw anything
+% Red Amogus Cat: I went with you the whole game
+% Red Amogus Cat: I'm doing tasks, not standing AFK
 => END
 
 ~ start_unhide
 
-Red Amogus Cat: [I thought I could win|It's very hard to play as a traitor]
-
+% Red Amogus Cat: I thought I could win
+% Red Amogus Cat: It's very hard to play as a traitor
 => END
 
 ~ emergency
