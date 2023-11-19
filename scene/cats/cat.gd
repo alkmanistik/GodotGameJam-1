@@ -24,10 +24,10 @@ func ready():
 	unhide = Global.cat_dict[name][1]
 	photographed = Global.cat_dict[name][0]
 
-func _on_camera_area_body_entered(_body: Node2D) -> void:
+func _on_camera_area_body_entered(body: Node2D) -> void:
 	Global.temp_cat = name
 
-func _on_camera_area_body_exited(_body: Node2D) -> void:
+func _on_camera_area_body_exited(body: Node2D) -> void:
 	Global.temp_cat = "default"
 
 #func _unhandled_input(_event: InputEvent) -> void:

@@ -6,19 +6,12 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ukrch"]
 
-[node name="Loading" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("1_xlth7")
+[node name="Loading" type="CanvasLayer"]
+follow_viewport_enabled = true
 script = ExtResource("2_u4yq2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 self_modulate = Color(0.54902, 0.54902, 0.54902, 1)
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -28,7 +21,6 @@ texture = SubResource("CanvasTexture_ukrch")
 
 [node name="Number" type="Label" parent="."]
 unique_name_in_owner = true
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -40,11 +32,12 @@ offset_right = 141.5
 offset_bottom = 52.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_xlth7")
 theme_override_font_sizes/font_size = 74
 text = "Loading"
 
 [node name="Control" type="Control" parent="."]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -56,6 +49,7 @@ offset_right = 15.0
 offset_bottom = 3.00006
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_xlth7")
 
 [node name="Control2" type="Control" parent="Control"]
 layout_mode = 1
@@ -186,7 +180,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_4e54r")
 
 [node name="Control2" type="Control" parent="."]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -380,7 +374,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_4e54r")
 
 [node name="Control3" type="Control" parent="."]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

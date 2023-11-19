@@ -16,8 +16,8 @@ func unlock_locator():
 	%TextureRect.visible = false
 	%to_locator.disabled = false
 
-func update_label(now_cat: int,max_cat: int):
-	%Label.text = str(now_cat) + " / " + str(max_cat)
+func update_label():
+	%Cats_Label.text = str(Global.find_cat)+" / 18"
 
 func update_time_label():
 	var temp = Time.get_time_dict_from_system()
@@ -25,6 +25,10 @@ func update_time_label():
 		%Time_Label.text = str(temp.hour)+":"+str(temp.minute)
 	else:
 		%Time_Label.text = str(temp.hour)+":0"+str(temp.minute)
+
+func _process(_delta: float) -> void:
+	update_label()
+	update_time_label()
 
 func _ready():
 	update_time_label()
@@ -57,8 +61,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 				_on_to_telephone_pressed()
 
 func _on_timer_timeout() -> void:
-	update_time_label()
-	$Timer.start()
+	pass
 
 func _on_to_taxi_pressed() -> void:
 	to_hide_pos()

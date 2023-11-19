@@ -1,5 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyb11i8lnap2d"]
+[gd_scene load_steps=4 format=3 uid="uid://cyb11i8lnap2d"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_5nijs"]
+[ext_resource type="Texture2D" uid="uid://k1va04ekum2l" path="res://resource/cats/Archeolog.png" id="2_7tb5m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7ob4"]
+size = Vector2(103, 215)
 
 [node name="Archaeologist" instance=ExtResource("1_5nijs")]
+
+[node name="Collision_Cat" parent="." index="0"]
+position = Vector2(-3.5, 1.5)
+shape = SubResource("RectangleShape2D_b7ob4")
+
+[node name="Sprite_Cat" parent="." index="1"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_7tb5m")

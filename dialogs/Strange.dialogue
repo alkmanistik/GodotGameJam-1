@@ -1,0 +1,16 @@
+~ start_hide
+
+Strange Cat: Hey, do you want to try something different
+Strange Cat: Valerian, it's absolutely free for you
+- Give Valerian
+	Strange Cat: I'm waiting for you next time
+	do secret_func("Strange")
+- Move away => END
+
+=> END
+
+~ start_unhide
+
+Strange Cat: Contact us if you need anything else
+
+=> END

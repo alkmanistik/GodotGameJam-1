@@ -1,13 +1,20 @@
 extends "res://scene/cats/cat.gd"
 
-
-func _ready():
-	ready
+func _ready() -> void:
+	ready()
 	if unhide:
 		fix()
 
+func secret_func():
+	fix()
+	disable_hide()
+	Global.inventory_dict["Valerian"] = 0
+	Global.save_game()
+
 func fix():
-	pass
+	var tween = create_tween()
+	tween.tween_property(self, "position", position - Vector2(150,0),0.4)
+	await get_tree().create_timer(0.4).timeout
 
 func click():
 	if unhide:

@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyc7l3j3usi0f"]
+[gd_scene load_steps=5 format=3 uid="uid://dyc7l3j3usi0f"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_nwex7"]
 [ext_resource type="Script" path="res://scene/cats/programmer.gd" id="2_561fi"]
+[ext_resource type="Texture2D" uid="uid://dkckedeiauvkx" path="res://resource/cats/Programer.png" id="3_5hxg4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lb5h"]
+size = Vector2(175, 136)
 
 [node name="Programmer" instance=ExtResource("1_nwex7")]
 script = ExtResource("2_561fi")
+
+[node name="Collision_Cat" parent="." index="0"]
+position = Vector2(7.5, -4)
+shape = SubResource("RectangleShape2D_6lb5h")
+
+[node name="Sprite_Cat" parent="." index="1"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_5hxg4")

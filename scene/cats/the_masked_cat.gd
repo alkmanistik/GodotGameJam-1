@@ -8,6 +8,7 @@ func _ready() -> void:
 func secret_func():
 	disable_hide()
 	$Pumpkin.hide()
+	Global.add_item("Pumpkin")
 
 func click():
 	if unhide:

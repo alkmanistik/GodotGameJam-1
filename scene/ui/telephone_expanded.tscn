@@ -378,7 +378,7 @@ theme_override_constants/separation = 25
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer2/Control"]
+[node name="City" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer2/Control"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 1
 anchors_preset = 8
@@ -418,7 +418,7 @@ theme_override_constants/separation = 25
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer3/Control"]
+[node name="Laboratory" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer3/Control"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 1
 anchors_preset = 8
@@ -458,7 +458,7 @@ theme_override_constants/separation = 25
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer4/Control"]
+[node name="Park" type="Button" parent="Taxi/VBoxContainer/HBoxContainer/VBoxContainer4/Control"]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 1
 anchors_preset = 8
@@ -1345,5 +1345,8 @@ texture = ExtResource("1_m3yjn")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 
+[connection signal="pressed" from="Taxi/VBoxContainer/HBoxContainer/VBoxContainer2/Control/City" to="." method="_on_city_pressed"]
+[connection signal="pressed" from="Taxi/VBoxContainer/HBoxContainer/VBoxContainer3/Control/Laboratory" to="." method="_on_laboratory_pressed"]
+[connection signal="pressed" from="Taxi/VBoxContainer/HBoxContainer/VBoxContainer4/Control/Park" to="." method="_on_park_pressed"]
 [connection signal="pressed" from="Photoapparat/Get_Picture" to="." method="_on_get_picture_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,5 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpe63l6oiel5u"]
+[gd_scene load_steps=4 format=3 uid="uid://cpe63l6oiel5u"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_cj0go"]
+[ext_resource type="Texture2D" uid="uid://b1o1frsj6drk2" path="res://resource/cats/Gigachad.png" id="2_kdt44"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqene"]
+size = Vector2(308, 218)
 
 [node name="Gigachad" instance=ExtResource("1_cj0go")]
+
+[node name="Collision_Cat" parent="." index="0"]
+shape = SubResource("RectangleShape2D_gqene")
+
+[node name="Sprite_Cat" parent="." index="1"]
+position = Vector2(3, 38)
+texture = ExtResource("2_kdt44")

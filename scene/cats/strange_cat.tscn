@@ -1,5 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://babv1ls2ixr73"]
+[gd_scene load_steps=5 format=3 uid="uid://babv1ls2ixr73"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_s8saq"]
+[ext_resource type="Script" path="res://scene/cats/strange_cat.gd" id="2_qehov"]
+[ext_resource type="Texture2D" uid="uid://t4aste0tq8ki" path="res://resource/cats/Strange.png" id="2_wd0lk"]
 
-[node name="Strange Cat" instance=ExtResource("1_s8saq")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wianx"]
+size = Vector2(126, 164)
+
+[node name="Strange" instance=ExtResource("1_s8saq")]
+script = ExtResource("2_qehov")
+
+[node name="Collision_Cat" parent="." index="0"]
+position = Vector2(-23, 5)
+shape = SubResource("RectangleShape2D_wianx")
+
+[node name="Sprite_Cat" parent="." index="1"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_wd0lk")

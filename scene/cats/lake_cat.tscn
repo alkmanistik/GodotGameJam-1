@@ -1,5 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bbyxqeus5gg7"]
+[gd_scene load_steps=5 format=3 uid="uid://bbyxqeus5gg7"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_1dr04"]
+[ext_resource type="Texture2D" uid="uid://b3083euyub31g" path="res://resource/cats/Lake.png" id="2_1vwyq"]
+[ext_resource type="Script" path="res://scene/cats/lake_cat.gd" id="2_s58ts"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dcxum"]
+radius = 60.2993
 
 [node name="Lake Cat" instance=ExtResource("1_1dr04")]
+script = ExtResource("2_s58ts")
+
+[node name="Collision_Cat" parent="." index="0"]
+shape = SubResource("CircleShape2D_dcxum")
+
+[node name="Sprite_Cat" parent="." index="1"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_1vwyq")

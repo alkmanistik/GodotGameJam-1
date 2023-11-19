@@ -6,7 +6,8 @@ func _ready() -> void:
 		fix()
 
 func fix():
-	$Scarecrow.hide
+	disable_hide()
+	$Scarecrow.hide()
 	$Scarecrow_pumpkin.show()
 
 func click():

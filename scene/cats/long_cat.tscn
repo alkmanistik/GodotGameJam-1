@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://dut7nc4wc7xrg" path="res://resource/cats/Long Cat.png" id="2_hvyyw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8lssw"]
-radius = 84.0
-height = 576.0
+radius = 76.0
+height = 344.0
 
 [node name="Long Cat" instance=ExtResource("1_bjuh2")]
 
 [node name="Collision_Cat" parent="." index="0"]
-position = Vector2(-1, -69)
+position = Vector2(-5, -186)
 shape = SubResource("CapsuleShape2D_8lssw")
 
 [node name="Sprite_Cat" parent="." index="1"]

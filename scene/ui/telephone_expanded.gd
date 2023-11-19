@@ -6,6 +6,7 @@ var temp_page: String = "Setting"
 var show_small_phone: bool = true
 signal flash()
 
+signal change_level(name:String)
 signal show_mini_phone()
 
 func open():
@@ -32,6 +33,8 @@ func _on_button_pressed() -> void:
 func _unhandled_input(_event: InputEvent) -> void:
 	if !show_small_phone and Input.is_action_just_pressed("esc"):
 		_on_button_pressed()
+	if $Photoapparat.visible and Input.is_action_just_pressed("action"):
+		_on_get_picture_pressed()
 
 
 func _on_get_picture_pressed() -> void:
@@ -45,4 +48,19 @@ func _on_get_picture_pressed() -> void:
 	if !Global.cat_dict[Global.temp_cat][1]:
 		image.save_png(Global.path_to_save_picture+"default"+".png")
 	else:
+		if Global.cat_dict[Global.temp_cat][0] == 0:
+			Global.cat_dict[Global.temp_cat][0] = 1
+			Global.add_cat_label()
 		image.save_png(Global.path_to_save_picture+Global.temp_cat+".png")
+
+
+func _on_city_pressed() -> void:
+	change_level.emit("res://scene/location/city.tscn")
+
+
+func _on_laboratory_pressed() -> void:
+	change_level.emit("res://scene/location/laboratory.tscn")
+
+
+func _on_park_pressed() -> void:
+	change_level.emit("res://scene/location/park.tscn")

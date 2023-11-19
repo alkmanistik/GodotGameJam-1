@@ -1,5 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7df1m0npy7wx"]
+[gd_scene load_steps=5 format=3 uid="uid://b7df1m0npy7wx"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_5d178"]
+[ext_resource type="Script" path="res://scene/cats/scientist.gd" id="2_rk0ug"]
+[ext_resource type="Texture2D" uid="uid://7u6w5kxq682j" path="res://resource/cats/Science.png" id="2_twrw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2x61u"]
+size = Vector2(114, 173)
 
 [node name="Scientist" instance=ExtResource("1_5d178")]
+script = ExtResource("2_rk0ug")
+
+[node name="Collision_Cat" parent="." index="0"]
+position = Vector2(-8, 2.5)
+shape = SubResource("RectangleShape2D_2x61u")
+
+[node name="Sprite_Cat" parent="." index="1"]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_twrw1")

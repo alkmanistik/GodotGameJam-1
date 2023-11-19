@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6mmjaneuepfo"]
+[gd_scene load_steps=12 format=3 uid="uid://c6mmjaneuepfo"]
 
 [ext_resource type="PackedScene" uid="uid://ek3es5ndcrrn" path="res://scene/location/location.tscn" id="1_ui0pk"]
 [ext_resource type="Script" path="res://scene/location/city.gd" id="2_503lm"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bxiv2ny1dr05m" path="res://scene/cats/ninja.tscn" id="7_dy622"]
 [ext_resource type="PackedScene" uid="uid://cjyknopvyc1y5" path="res://scene/cats/flag_cat.tscn" id="8_dh6ir"]
 [ext_resource type="PackedScene" uid="uid://coesx4v2jf83w" path="res://scene/cats/the_masked_cat.tscn" id="9_yp6oy"]
+[ext_resource type="Texture2D" uid="uid://duksgsx0ssfmv" path="res://resource/texture/CartBoxCatDog.png" id="11_hyk7g"]
 
 [node name="City" instance=ExtResource("1_ui0pk")]
 script = ExtResource("2_503lm")
@@ -37,14 +38,13 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_6rhkk")
 
 [node name="Cat Reporter" parent="Cats" index="0" groups=["Cat"] instance=ExtResource("5_kcu1w")]
-position = Vector2(1921, 1489)
-collision_mask = 17
+position = Vector2(1349, 1011)
 
 [node name="Long Cat" parent="Cats" index="1" groups=["Cat"] instance=ExtResource("6_5mjmp")]
 position = Vector2(865, 875)
 
 [node name="Ninja" parent="Cats" index="2" groups=["Cat"] instance=ExtResource("7_dy622")]
-position = Vector2(2279, 1603)
+position = Vector2(2883, 1801)
 
 [node name="Flag Cat" parent="Cats" index="3" groups=["Cat"] instance=ExtResource("8_dh6ir")]
 position = Vector2(1975, 1417)
@@ -55,5 +55,12 @@ position = Vector2(2684, 1079)
 [node name="Cat Dog" parent="Cats" index="5" groups=["Cat"] instance=ExtResource("4_medf7")]
 position = Vector2(2160, 1012)
 
-[node name="Start" parent="." index="6"]
+[node name="Cat_Object" type="Node2D" parent="." index="4"]
+
+[node name="CartBoxCatDog" type="Sprite2D" parent="Cat_Object" index="0"]
+position = Vector2(2330, 1017)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("11_hyk7g")
+
+[node name="Start" parent="." index="7"]
 position = Vector2(1750, 1160)

@@ -14,6 +14,8 @@ func secret_func():
 func fix():
 	var tween = create_tween()
 	tween.tween_property(self, "position", position - Vector2(150,0),0.4)
+	await get_tree().create_timer(0.4).timeout
+	$Bone.show()
 
 func click():
 	if unhide:

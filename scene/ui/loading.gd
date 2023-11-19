@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 var rotation_speed = 0.5
 

@@ -6,7 +6,7 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_4ub3s"]
 
-[node name="Location" type="Node2D"]
+[node name="Location" type="Node2D" groups=["local"]]
 script = ExtResource("1_7qryb")
 
 [node name="Loading" type="Node" parent="."]
@@ -32,3 +32,6 @@ position = Vector2(960, 540)
 
 [node name="Right_Down_Stopper" type="Marker2D" parent="."]
 position = Vector2(19364, 11973)
+
+[node name="Load" type="Node2D" parent="."]
+z_index = 2

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbdqtuglknpq4"]
+
+[ext_resource type="Script" path="res://scene/object/emergency.gd" id="1_5qjjg"]
+[ext_resource type="Texture2D" uid="uid://bepxvbxoe0tdy" path="res://resource/texture/emergency_button.png" id="1_6khm0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0k6ej"]
+size = Vector2(22, 14)
+
+[node name="Emergency" type="Area2D"]
+script = ExtResource("1_5qjjg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_6khm0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 3)
+shape = SubResource("RectangleShape2D_0k6ej")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

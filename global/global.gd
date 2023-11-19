@@ -24,7 +24,7 @@ var cat_dict_null: Dictionary = {"Cat Dog": [0,0], "The Masked Cat": [0,0], "Nin
 "Shroedinger`s Cat": [0,0],"Nyan Cat": [0,0],"Gigachad": [0,0],
 "Amogus": [0,0],"Programmer": [0,0],"Scientist": [0,0],
 "Fluffy": [0,0],"Lake Cat": [0,0],"Jumping Cat": [0,0],
-"Fermer": [0,0],"Strange cat": [0,0],"Archaeologist": [0,0]}
+"Fermer": [0,0],"Strange": [0,0],"Archaeologist": [0,0], "default": [0,0]}
 var inventory_dict_null: Dictionary = {"Bone": 0, "Pumpkin": 0, "Valerian": 0, "Hairbrush": 0}
 
 var cat_dict: Dictionary = cat_dict_null
@@ -68,3 +68,17 @@ func secret_func(name_cat):
 	for i in get_tree().get_nodes_in_group("cat"):
 		if i.name == name_cat:
 			i.secret_func()
+
+func add_item(item_name):
+	inventory_dict[item_name] = 1
+	save_game()
+
+func add_cat_label():
+	find_cat += 1
+	if location == "City":
+		find_cat_city += 1
+	elif location == "Laboratory":
+		find_cat_laboratory += 1
+	elif location == "Park":
+		find_cat_park += 1
+	save_game()

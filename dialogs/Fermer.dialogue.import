@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cs35w8xv3laqi"
+path="res://.godot/imported/Fermer.dialogue-9f4863f48fee56fcaa331c0cb77420f7.tres"
+
+[deps]
+
+source_file="res://dialogs/Fermer.dialogue"
+dest_files=["res://.godot/imported/Fermer.dialogue-9f4863f48fee56fcaa331c0cb77420f7.tres"]
+
+[params]
+
+defaults=true
