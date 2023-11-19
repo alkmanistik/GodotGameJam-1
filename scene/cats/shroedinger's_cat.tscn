@@ -1,5 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://df04d01vr4wtp"]
+[gd_scene load_steps=5 format=3 uid="uid://df04d01vr4wtp"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_owbdf"]
+[ext_resource type="Script" path="res://scene/cats/shroedinger's_cat.gd" id="2_5w8qc"]
+[ext_resource type="Texture2D" uid="uid://1y2dm247v7v4" path="res://resource/cats/cat11.png" id="2_e7kml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w31qg"]
+size = Vector2(143, 183)
 
 [node name="Shroedinger\'s Cat" instance=ExtResource("1_owbdf")]
+script = ExtResource("2_5w8qc")
+
+[node name="Collision_Cat" parent="." index="0"]
+position = Vector2(0.5, -1.5)
+shape = SubResource("RectangleShape2D_w31qg")
+
+[node name="Sprite_Cat" parent="." index="1"]
+visible = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_e7kml")

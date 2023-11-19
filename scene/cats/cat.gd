@@ -41,3 +41,10 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 
 func click():
 	DialogueManager.show_dialogue_balloon(load("res://dialogs/"+name+".dialogue"), "start")
+
+func secret_func():
+	disable_hide()
+	fix()
+
+func fix():
+	pass

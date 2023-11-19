@@ -1,13 +1,19 @@
-~ start
+~ start_hide
 
 
 Cat Dog: Woof, Woof, I want a bone
 Cat Dog: Woof-Woof
 if inventory_dict["Bone"] == 1:
-	Cat Dog: Woof
+	Cat Dog: Woof-Woof
 	- Give a bone
 		Cat Dog: Is that a bone? Woof
 		do secret_func("Cat Dog")
 	- Move away => END
 - Move away => END
+=> END
+
+~ start_unhide
+
+Cat Dog: I finally see the light
+
 => END

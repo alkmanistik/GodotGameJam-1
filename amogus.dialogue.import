@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://be32a2bumg7xa"
+path="res://.godot/imported/amogus.dialogue-8f9a6832e71666ea60418e63df452d03.tres"
+
+[deps]
+
+source_file="res://amogus.dialogue"
+dest_files=["res://.godot/imported/amogus.dialogue-8f9a6832e71666ea60418e63df452d03.tres"]
+
+[params]
+
+defaults=true

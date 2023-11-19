@@ -1,5 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmpva383b3vk1"]
+[gd_scene load_steps=7 format=3 uid="uid://bmpva383b3vk1"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_xy1oy"]
+[ext_resource type="Texture2D" uid="uid://qjahv4gxjp71" path="res://resource/cats/Fermer.png" id="2_1tx3d"]
+[ext_resource type="Script" path="res://scene/cats/fermer.gd" id="2_ybvc7"]
+[ext_resource type="Texture2D" uid="uid://bb8bifkr3gqe3" path="res://resource/texture/Scarecrow.png" id="3_fletl"]
+[ext_resource type="Texture2D" uid="uid://qlol22jlr43v" path="res://resource/texture/Pumpkin.png" id="4_pryyf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kj1ib"]
+size = Vector2(143, 207)
 
 [node name="Fermer" instance=ExtResource("1_xy1oy")]
+script = ExtResource("2_ybvc7")
+
+[node name="Collision_Cat" parent="." index="0"]
+position = Vector2(-2.5, -0.5)
+shape = SubResource("RectangleShape2D_kj1ib")
+
+[node name="Sprite_Cat" parent="." index="1"]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_1tx3d")
+
+[node name="Scarecrow_pumpkin" type="Sprite2D" parent="." index="2"]
+visible = false
+position = Vector2(-180, -33)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_fletl")
+
+[node name="Pumpkin" type="Sprite2D" parent="Scarecrow_pumpkin" index="0"]
+position = Vector2(-4, -218)
+texture = ExtResource("4_pryyf")
+
+[node name="Scarecrow" type="Sprite2D" parent="." index="3"]
+position = Vector2(-10, -31)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_fletl")

@@ -1,6 +1,6 @@
 extends "res://scene/cats/cat.gd"
 
-var speed = 1000
+var speed = 10
 var temp
 
 func _physics_process(delta: float) -> void:

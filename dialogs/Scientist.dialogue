@@ -1,0 +1,20 @@
+~ start_hide
+
+Scientist: Hi, could you help me?
+Scientist: Could you bring me some samples of the local valerian?
+if inventory_dict["Valerian"] == 1:
+	Scientist: Could you bring me some samples of the local valerian?
+	- Give valerian
+		Scientist: Checking the sample
+		Scientist: I knew it, thank you very much
+		do secret_func("Scientist")
+	- Move away => END
+- Move away => END
+
+=> END
+
+~ start_unhide
+
+Scientist: [Thanks for the help|We have received samples]
+
+=> END

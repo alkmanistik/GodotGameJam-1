@@ -1,0 +1,19 @@
+~ start_hide
+
+Fermer: Hi, could you help me?
+Fermer: My scarecrow is not so scary, and my beds are eaten by crows
+if inventory_dict["Pumpkin"] == 1:
+	Fermer: My scarecrow is not so scary, and my beds are eaten by crows
+	- Comb the cat
+		do secret_func("Fluffy")
+		Fermer: I feel so good
+	- Move away => END
+- Move away => END
+
+=> END
+
+~ start_unhide
+
+Fermer: [Thanks for the help|Now my beds are safe]
+
+=> END

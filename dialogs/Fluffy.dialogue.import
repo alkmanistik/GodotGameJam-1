@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bmo3ttp7kbfwo"
+path="res://.godot/imported/Fluffy.dialogue-5917cd9a21cf9caef5b1b6e50d249acc.tres"
+
+[deps]
+
+source_file="res://dialogs/Fluffy.dialogue"
+dest_files=["res://.godot/imported/Fluffy.dialogue-5917cd9a21cf9caef5b1b6e50d249acc.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dg0uga3xe67bp"
+path="res://.godot/imported/Jumping Cat.dialogue-a36e24fe58700b8a8fb52a5dc51c9195.tres"
+
+[deps]
+
+source_file="res://dialogs/Jumping Cat.dialogue"
+dest_files=["res://.godot/imported/Jumping Cat.dialogue-a36e24fe58700b8a8fb52a5dc51c9195.tres"]
+
+[params]
+
+defaults=true

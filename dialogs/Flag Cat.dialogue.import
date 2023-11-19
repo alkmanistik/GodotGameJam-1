@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://jnrfoktciyia"
+path="res://.godot/imported/Flag Cat.dialogue-6b46c1aa16b21be1e696c781b6c19e60.tres"
+
+[deps]
+
+source_file="res://dialogs/Flag Cat.dialogue"
+dest_files=["res://.godot/imported/Flag Cat.dialogue-6b46c1aa16b21be1e696c781b6c19e60.tres"]
+
+[params]
+
+defaults=true

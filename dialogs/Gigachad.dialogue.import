@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://chkaynlug3ry1"
+path="res://.godot/imported/Gigachad.dialogue-9a42259cd82f68c4cff5d9ec49aa3570.tres"
+
+[deps]
+
+source_file="res://dialogs/Gigachad.dialogue"
+dest_files=["res://.godot/imported/Gigachad.dialogue-9a42259cd82f68c4cff5d9ec49aa3570.tres"]
+
+[params]
+
+defaults=true

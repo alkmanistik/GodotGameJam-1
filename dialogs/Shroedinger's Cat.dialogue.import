@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bs5h1trjny484"
+path="res://.godot/imported/Shroedinger's Cat.dialogue-1373ccbebeeb247d37ccf5eec15c8311.tres"
+
+[deps]
+
+source_file="res://dialogs/Shroedinger's Cat.dialogue"
+dest_files=["res://.godot/imported/Shroedinger's Cat.dialogue-1373ccbebeeb247d37ccf5eec15c8311.tres"]
+
+[params]
+
+defaults=true

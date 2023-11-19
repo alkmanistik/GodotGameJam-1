@@ -1,0 +1,19 @@
+~ start_hide
+
+Fluffy: I'm so fluffy, meow
+Fluffy: Comb me meow please
+if inventory_dict["Hairbrush"] == 1:
+	Fluffy: Comb me meow please
+	- Comb the cat
+		do secret_func("Fluffy")
+		Fluffy: I feel so good
+	- Move away => END
+- Move away => END
+
+=> END
+
+~ start_unhide
+
+Fluffy: Thanks for the help
+
+=> END

@@ -1,0 +1,11 @@
+~ start_hide
+
+Strange Box: [A very strange box|Maybe she's in a different state|it seems that an inhumane experiment was conducted here]
+
+=> END
+
+~ start_unhide
+
+Shroedinger's Cat: [It's amazing that we met|If you see me, then I'm alive]
+
+=> END

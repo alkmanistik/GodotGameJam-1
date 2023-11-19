@@ -1,0 +1,17 @@
+~ start_hide
+
+The Masked Cat: Boooo was it scary?
+The Masked Cat: Trick or Treat
+- Halloween is long over
+	The Masked Cat: That it can't be
+	The Masked Cat: If you're right, then I don't need this mask, take it away
+	do secret_func("The Masked Cat")
+- Move away => END
+
+=> END
+
+~ start_unhide
+
+The Masked Cat: [I can't wait for next Halloween|Without this pumpkin, I am a very beautiful cat]
+
+=> END

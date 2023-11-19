@@ -1,5 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6pbuu8b7qe8i"]
+[gd_scene load_steps=5 format=3 uid="uid://b6pbuu8b7qe8i"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_kkrg6"]
+[ext_resource type="Texture2D" uid="uid://dm2fhtq8ddjeo" path="res://resource/cats/cat03.png" id="2_hckfx"]
+[ext_resource type="Texture2D" uid="uid://m5232aaspcv7" path="res://resource/texture/CardboardBox.png" id="3_76l0e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a682d"]
+size = Vector2(227, 198)
 
 [node name="Jumping Cat" instance=ExtResource("1_kkrg6")]
+
+[node name="Collision_Cat" parent="." index="0"]
+position = Vector2(0.5, -134)
+shape = SubResource("RectangleShape2D_a682d")
+
+[node name="Sprite_Cat" parent="." index="1"]
+position = Vector2(0, -1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_hckfx")
+
+[node name="CardboardBox" type="Sprite2D" parent="." index="2"]
+position = Vector2(7.62939e-06, -0.999992)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_76l0e")

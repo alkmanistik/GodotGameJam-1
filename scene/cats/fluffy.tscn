@@ -1,5 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://8slm57yxvoub"]
+[gd_scene load_steps=6 format=3 uid="uid://8slm57yxvoub"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_7n5ym"]
+[ext_resource type="Texture2D" uid="uid://ps3l8x605emv" path="res://resource/cats/Unflyffy.png" id="2_1bdt5"]
+[ext_resource type="Script" path="res://scene/cats/fluffy.gd" id="2_s7syc"]
+[ext_resource type="Texture2D" uid="uid://c4nlbh130bw76" path="res://resource/cats/Fluffy.png" id="3_3tskw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7pl0"]
+size = Vector2(170, 111)
 
 [node name="Fluffy" instance=ExtResource("1_7n5ym")]
+script = ExtResource("2_s7syc")
+
+[node name="Collision_Cat" parent="." index="0"]
+position = Vector2(-1, -12.5)
+shape = SubResource("RectangleShape2D_p7pl0")
+
+[node name="Sprite_Cat" parent="." index="1"]
+visible = false
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_1bdt5")
+
+[node name="Fluffy" type="Sprite2D" parent="." index="2"]
+position = Vector2(14, -22)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_3tskw")

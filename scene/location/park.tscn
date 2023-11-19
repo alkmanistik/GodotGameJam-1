@@ -3,23 +3,29 @@
 [ext_resource type="PackedScene" uid="uid://ek3es5ndcrrn" path="res://scene/location/location.tscn" id="1_e61p4"]
 [ext_resource type="PackedScene" uid="uid://8slm57yxvoub" path="res://scene/cats/fluffy.tscn" id="2_ol8xe"]
 [ext_resource type="PackedScene" uid="uid://bbyxqeus5gg7" path="res://scene/cats/lake_cat.tscn" id="3_lgok4"]
-[ext_resource type="Script" path="res://scene/cats/fluffy.gd" id="3_wl0md"]
 [ext_resource type="PackedScene" uid="uid://b6pbuu8b7qe8i" path="res://scene/cats/jumping_cat.tscn" id="4_7vife"]
 [ext_resource type="PackedScene" uid="uid://bmpva383b3vk1" path="res://scene/cats/fermer.tscn" id="5_3cbl2"]
+[ext_resource type="Script" path="res://scene/cats/jumping_cat.gd" id="5_vbdde"]
 [ext_resource type="PackedScene" uid="uid://babv1ls2ixr73" path="res://scene/cats/strange_cat.tscn" id="6_41wpu"]
 [ext_resource type="PackedScene" uid="uid://cyb11i8lnap2d" path="res://scene/cats/archaeologist.tscn" id="7_v8tay"]
 
 [node name="Park" instance=ExtResource("1_e61p4")]
 
 [node name="Fluffy" parent="Cats" index="0" groups=["Cat"] instance=ExtResource("2_ol8xe")]
-script = ExtResource("3_wl0md")
+position = Vector2(1055, 306)
 
 [node name="Lake Cat" parent="Cats" index="1" groups=["Cat"] instance=ExtResource("3_lgok4")]
+position = Vector2(555, 318)
 
 [node name="Jumping Cat" parent="Cats" index="2" groups=["Cat"] instance=ExtResource("4_7vife")]
+position = Vector2(324, 780)
+script = ExtResource("5_vbdde")
 
 [node name="Fermer" parent="Cats" index="3" groups=["Cat"] instance=ExtResource("5_3cbl2")]
+position = Vector2(1117, 754)
 
 [node name="Strange Cat" parent="Cats" index="4" groups=["Cat"] instance=ExtResource("6_41wpu")]
+position = Vector2(1665, 619)
 
 [node name="Archaeologist" parent="Cats" index="5" groups=["Cat"] instance=ExtResource("7_v8tay")]
+position = Vector2(123, 263)

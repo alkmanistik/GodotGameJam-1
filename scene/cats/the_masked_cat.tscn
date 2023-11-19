@@ -1,5 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://coesx4v2jf83w"]
+[gd_scene load_steps=6 format=3 uid="uid://coesx4v2jf83w"]
 
 [ext_resource type="PackedScene" uid="uid://q6r82wtcyigf" path="res://scene/cats/cat.tscn" id="1_ble35"]
+[ext_resource type="Script" path="res://scene/cats/the_masked_cat.gd" id="2_x6tlh"]
+[ext_resource type="Texture2D" uid="uid://b2cukytn1ysue" path="res://resource/cats/cat05.png" id="2_yfphd"]
+[ext_resource type="Texture2D" uid="uid://qlol22jlr43v" path="res://resource/texture/Pumpkin.png" id="4_t0dio"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpflo"]
+size = Vector2(126, 182)
 
 [node name="The Masked Cat" instance=ExtResource("1_ble35")]
+script = ExtResource("2_x6tlh")
+
+[node name="Collision_Cat" parent="." index="0"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_vpflo")
+
+[node name="Sprite_Cat" parent="." index="1"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_yfphd")
+
+[node name="Pumpkin" type="Sprite2D" parent="." index="2"]
+position = Vector2(-1.12501, -40.875)
+scale = Vector2(0.563477, 0.555664)
+texture = ExtResource("4_t0dio")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://8x7g20bnuq2k"
+path="res://.godot/imported/Programmer.dialogue-74c628153f154d38c94c806afa5e3d6a.tres"
+
+[deps]
+
+source_file="res://dialogs/Programmer.dialogue"
+dest_files=["res://.godot/imported/Programmer.dialogue-74c628153f154d38c94c806afa5e3d6a.tres"]
+
+[params]
+
+defaults=true

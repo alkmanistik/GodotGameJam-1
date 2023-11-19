@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://d4cjbp62ad4h6"
+path="res://.godot/imported/Archaeologist.dialogue-bb9fbbe1c1c38c7b499dc31cbe3acd4d.tres"
+
+[deps]
+
+source_file="res://dialogs/Archaeologist.dialogue"
+dest_files=["res://.godot/imported/Archaeologist.dialogue-bb9fbbe1c1c38c7b499dc31cbe3acd4d.tres"]
+
+[params]
+
+defaults=true
