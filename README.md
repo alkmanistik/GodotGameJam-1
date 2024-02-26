@@ -1,9 +1,7 @@
 # GodotGameJam-1
 
 # Как поиграть в неё
-
- 	По ссылке в [itch.io](https://alkmanistik.itch.io/cats-wisdom)
-  	Проект делался для gamejam результат можно увидеть [тут](https://itch.io/jam/godot-wild-jam-63/rate/2376822)
+По ссылке в [itch.io](https://alkmanistik.itch.io/cats-wisdom). Проект делался для gamejam результат можно увидеть [тут](https://itch.io/jam/godot-wild-jam-63/rate/2376822)
 
 # Паттерн программирования:
 ### Переменные
